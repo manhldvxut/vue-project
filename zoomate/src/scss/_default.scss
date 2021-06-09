@@ -1,0 +1,121 @@
+@charset "utf-8";
+html {
+  font-size: 100%;
+  letter-spacing: 0.03em;
+  line-height: 1.3rem;
+}
+body {
+  color: #000;
+  font-family:"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-size: 100%;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+img {
+  width: 100%;
+}
+
+body, html{
+	height: 100%;
+}
+.wrapper{
+	position: relative;
+}
+
+
+// font 
+$font_en :'Roboto', sans-serif;
+
+
+%pos {
+  position: absolute;
+  content: "";
+}
+
+::placeholder {
+  color: $txt_color;
+}
+
+.sp-only{
+	display: none;
+}
+
+@include media-sp{
+	.sp-only{
+		display: block;
+	}
+	.pc-only{
+		display: none;
+	}
+}
+
+.fixed{
+	overflow: hidden;
+}
+h2{
+  letter-spacing: 0;
+  text-transform: uppercase;
+  @include media-si{
+    @include fontSize(32px);
+  }
+  .jp{
+    @include fontSize(13px)
+    display: block;
+    font-weight: bold;
+    letter-spacing: 0;
+    @include media-si{
+      @include fontSize(12px);
+    }
+  }
+}
+
+.only_sp{
+  display: none;
+}
+
+@include media-si{
+  .only_sp{
+    display: block;
+  }
+  
+  .only_pc{
+    display: none;
+  }
+}
+
+.time, .tag{
+  color: $private;
+  @include fontSize(14px);
+  font-family: $font_en;
+  letter-spacing: 0;
+  @include media-si{
+    @include fontSize(13px);
+  }
+}
+.tag{
+  color: $txt_color;
+}
+.viewall{
+  text-align: right;
+  display: block;
+  @include fontSize(13px);
+  font-weight: bold;
+  color: $txt_color;
+  letter-spacing: 0;
+  position: relative;
+  transition: 0.3s all;
+  @include media-si{
+    @include fontSize(12px);
+  }
+  &:hover{
+    transform: translateX(10px);
+    color: $private;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+.showElement{
+  animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
