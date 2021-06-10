@@ -1,65 +1,135 @@
 [
-  {
-    "category": "pickup",
-    "link" : "/",
-    "image": "pickup01.png",
-    "title": "いつでもどこでも、大活躍。 \nポータブルAV家電最新アイテム特集"
-  },
-  {
-    "category": "pickup",
-    "link" : "/",
-    "image": "pickup02.png",
-    "title": "ROOMMATEがおすすめする\n最新の調理家電アイテム"
-  },
-  {
-    "category": "pickup",
-    "link" : "/",
-    "image": "pickup03.png",
-    "title": "暮らしにいいもの、集めました。\n製品ラインナップ"
-  },
-  {
-    "category": "product",
-    "link" : "/",
-    "image": "prd01.png",
-    "title": "無煙グリル調理器\nゼロスモークDX"
-  },
-  {
-    "category": "product",
-    "link" : "/",
-    "image": "prd02.png",
-    "title": "温調付き3枚プレート\nホットプレートミックス"
-  },
-  {
-    "category": "product",
-    "link" : "/",
-    "image": "prd03.png",
-    "title": "コンパクト炊飯器\nGOHANDAKI"
-  },
-  {
-    "category": "product",
-    "link" : "/",
-    "image": "prd04.png",
-    "title": "ホームメイドアイスメーカー\nネオ"
-  },
-  {
-    "category": "news",
-    "link" : "/",
-    "title": "【TV放映】フジテレビ「めざましテレビ」の「スゴ撮」にて無煙グリル ゼロスモークDX(RM-103TE)が紹介されました。",
-    "time" : "2021.05.27",
-    "tag" : "#MEDIA"
-  },
-  {
-    "category": "news",
-    "link" : "/",
-    "title": "【雑誌掲載】モノマスター7月号に無煙グリル調理器 ゼロスモークDX RM-103TEが掲載されました。",
-    "time" : "2021.05.27",
-    "tag" : "#MEDIA"
-  },
-  {
-    "category": "news",
-    "link" : "/",
-    "title": "【WEBメディア掲載】GetNavi webでゼロスモークDX　RM-103TEが紹介されました。",
-    "time" : "2021.05.27",
-    "tag" : "#MEDIA"
-  }
+    {
+      "category": "header_nav02",
+      "link" : "/",
+      "navItem" : "すべての製品"
+    },
+    {
+      "category": "header_nav02",
+      "link" : "/",
+      "navItem" : "家事家電"
+    },
+    {
+      "category": "header_nav02",
+      "link" : "/",
+      "navItem" : "季節家電"
+    },
+    {
+      "category": "header_nav02",
+      "link" : "/",
+      "navItem" : "カー用品"
+    },
+    {
+      "category": "header_nav02",
+      "link" : "/",
+      "navItem" : "雑貨"
+    },
+    {
+      "category": "header_nav02",
+      "link" : "/",
+      "navItem" : "理美容"
+    },
+    {
+      "category": "header_nav02",
+      "link" : "/",
+      "navItem" : "AV家電"
+    },
+    {
+      "category": "footer_nav02",
+      "link" : "/",
+      "navItem" : "ご購入方法(個人様)"
+    },
+    {
+      "category": "footer_nav02",
+      "link" : "/",
+      "navItem" : "新規お取引(企業様)"
+    },
+    {
+      "category": "footer_nav02",
+      "link" : "/",
+      "navItem" : "メディア掲載のご依頼"
+    },
+    {
+      "category": "footer_nav02",
+      "link" : "/",
+      "navItem" : "取扱説明書ダウンロード"
+    },
+    {
+      "category": "footer_nav02",
+      "link" : "/",
+      "navItem" : "お知らせ"
+    },
+    {
+      "category": "footer_nav02",
+      "link" : "/",
+      "navItem" : "会社概要"
+    },
+    {
+      "category": "footer_nav02",
+      "link" : "/",
+      "navItem" : "お問い合わせ"
+    },
+    {
+      "category": "pickup",
+      "link" : "/",
+      "image": "pickup01.png",
+      "title": "いつでもどこでも、大活躍。 \nポータブルAV家電最新アイテム特集"
+    },
+    {
+      "category": "pickup",
+      "link" : "/",
+      "image": "pickup02.png",
+      "title": "ROOMMATEがおすすめする\n最新の調理家電アイテム"
+    },
+    {
+      "category": "pickup",
+      "link" : "/",
+      "image": "pickup03.png",
+      "title": "暮らしにいいもの、集めました。\n製品ラインナップ"
+    },
+    {
+      "category": "product",
+      "link" : "/",
+      "image": "prd01.png",
+      "title": "無煙グリル調理器\nゼロスモークDX"
+    },
+    {
+      "category": "product",
+      "link" : "/",
+      "image": "prd02.png",
+      "title": "温調付き3枚プレート\nホットプレートミックス"
+    },
+    {
+      "category": "product",
+      "link" : "/",
+      "image": "prd03.png",
+      "title": "コンパクト炊飯器\nGOHANDAKI"
+    },
+    {
+      "category": "product",
+      "link" : "/",
+      "image": "prd04.png",
+      "title": "ホームメイドアイスメーカー\nネオ"
+    },
+    {
+      "category": "news",
+      "link" : "/",
+      "title": "【TV放映】フジテレビ「めざましテレビ」の「スゴ撮」にて無煙グリル ゼロスモークDX(RM-103TE)が紹介されました。",
+      "time" : "2021.05.27",
+      "tag" : "#MEDIA"
+    },
+    {
+      "category": "news",
+      "link" : "/",
+      "title": "【雑誌掲載】モノマスター7月号に無煙グリル調理器 ゼロスモークDX RM-103TEが掲載されました。",
+      "time" : "2021.05.27",
+      "tag" : "#MEDIA"
+    },
+    {
+      "category": "news",
+      "link" : "/",
+      "title": "【WEBメディア掲載】GetNavi webでゼロスモークDX　RM-103TEが紹介されました。",
+      "time" : "2021.05.27",
+      "tag" : "#MEDIA"
+    }
 ]

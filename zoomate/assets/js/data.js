@@ -1,10 +1,15 @@
 /*  stack
 ------------------------------------------------------------------------------------------------------------------------*/
 var intViewportWidth = window.innerWidth;
+
+
 $(function() {
-    //sliderPickup()
-    
-});
+  setTimeout(function(){
+    sliderTop();
+    pickupSlider()
+  }, 100);
+  
+})
 
 /*  data
 ------------------------------------------------------------------------------------------------------------------------*/
@@ -28,8 +33,8 @@ function showData(data){
       listPickup: [], //type02、type03で使用
       products: [], //type02、type03で使用
       news: [], //type02、type03で使用
-      list03: [], //type02、type03で使用
-      list04: [], //type02、type03で使用
+      footerNav02: [], //type02、type03で使用
+      headerNav: [], //type02、type03で使用
       active: false,
     },
 
@@ -43,6 +48,12 @@ function showData(data){
           arr04 = new Array();
 
       for (var i = 0; i < data.length; i++) {
+        if(data[i].category.indexOf('header_nav02') >= 0) {
+          arr04.push(data[i]);
+        };
+        if(data[i].category.indexOf('footer_nav02') >= 0) {
+          arr03.push(data[i]);
+        }
         if(data[i].category.indexOf('pickup') >= 0) {
           arrPickup.push(data[i]);
         }
@@ -52,19 +63,13 @@ function showData(data){
         if(data[i].category.indexOf('news') >= 0) {
           arr02.push(data[i]);
         }
-        if(data[i].category.indexOf('ctg03') >= 0) {
-          arr03.push(data[i]);
-        }
-        if(data[i].category.indexOf('ctg04') >= 0) {
-          arr04.push(data[i]);
-        };
       }
 
       this.listPickup = arrPickup;
       this.products = arr01;
       this.news = arr02;
-      this.list03 = arr03;
-      this.list04 = arr04;
+      this.footerNav02 = arr03;
+      this.headerNav = arr04;
 
       return;
     },
@@ -82,13 +87,110 @@ function showData(data){
           header.classList.remove('header--bgchange');
         }
       },
-
-
-
     },
-    updated (){
-      // slider pickup
-      $('.js-slider-pickup').slick({
+    // updated (){
+    //   // slider pickup
+    //   $('.js-slider-pickup').slick({
+    //       dots: true,
+    //       touchThreshold : 100,
+    //       speed: 300,
+    //       slidesToShow: 3,
+    //       slidesToScroll: 3,
+    //       centerMode: true,
+    //       responsive: [
+    //         {
+    //             breakpoint: 9999,
+    //             settings: "unslick"
+    //         },
+    //         {
+    //           breakpoint: 1024,
+    //           settings: {
+    //             slidesToShow: 1,
+    //             slidesToScroll: 1,
+    //             centerMode: false,
+    //           }
+    //         },
+    //         {
+    //           breakpoint: 767,
+    //           settings: {
+    //             slidesToShow: 1,
+    //             slidesToScroll: 1,
+    //           }
+    //         }
+    //       ]
+    //   });
+    //   // slider top page
+    //   $('.js-slider-top').slick({
+    //       autoplay: true,
+    //       autoplaySpeed: 3000,
+    //       dots: true,
+    //       infinite: true,
+    //       speed: 800,
+    //       fade: true,
+    //       cssEase: 'linear'
+    //     });
+    // },
+    watch: {
+      active: function(){
+        document.body.style.overflow = this.active ? 'hidden' : ''
+      },
+    },
+    created(){
+      window.addEventListener('scroll', this.handleSCroll);
+    },
+    destroyed(){
+      window.removeEventListener('scroll', this.handleSCroll);
+    },
+    directives: { // scroll fade in
+      infocus: {
+        isLiteral: true,
+        inserted: (el, binding, vnode) => {
+          let f = () => {
+            let rect = el.getBoundingClientRect()
+            let inView = (
+              rect.width > 0 &&
+              rect.height > 0 &&
+              rect.top >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            )
+            if (inView) {
+              el.classList.add(binding.value)
+              window.removeEventListener('scroll', f)
+            }
+          }
+          window.addEventListener('scroll', f)
+          f()
+        }
+      }
+    }
+  })
+}
+
+function sliderTop() {
+    const slider = $(document).find('.js-slider-top');
+    let sliderCont = slider.children('*').length;
+
+    //スライダーの枚数が1より多い場合に発火
+    if (sliderCont > 1) {
+        slider.slick({
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: true,
+          infinite: true,
+          speed: 800,
+          fade: true,
+          cssEase: 'linear'
+        });
+    }
+}
+
+function pickupSlider() {
+    const sliderPickup = $(document).find('.js-slider-pickup');
+    let sliderContPickup = sliderPickup.children('*').length;
+
+    //スライダーの枚数が1より多い場合に発火
+    if (sliderContPickup > 1) {
+        sliderPickup.slick({
           dots: true,
           touchThreshold : 100,
           speed: 300,
@@ -116,51 +218,8 @@ function showData(data){
               }
             }
           ]
-      });
-      $('.js-slider-top').slick({
-          autoplay: false,
-          autoplaySpeed: 3000,
-          dots: true,
-          infinite: true,
-          speed: 1500,
-          fade: true,
-          cssEase: 'linear'
         });
-    },
-    watch: {
-      active: function(){
-        document.body.style.overflow = this.active ? 'hidden' : ''
-      },
-    },
-    created(){
-      window.addEventListener('scroll', this.handleSCroll);
-    },
-    destroyed(){
-      window.removeEventListener('scroll', this.handleSCroll);
-    },
-    directives: {
-      infocus: {
-        isLiteral: true,
-        inserted: (el, binding, vnode) => {
-          let f = () => {
-            let rect = el.getBoundingClientRect()
-            let inView = (
-              rect.width > 0 &&
-              rect.height > 0 &&
-              rect.top >= 0 &&
-              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-            )
-            if (inView) {
-              el.classList.add(binding.value)
-              window.removeEventListener('scroll', f)
-            }
-          }
-          window.addEventListener('scroll', f)
-          f()
-        }
-      }
     }
-  })
 }
 
 

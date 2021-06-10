@@ -55,8 +55,8 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 				</div>
 			</div>
 			<div class="slider__main-item">
-				<img class="only_pc" src="/assets/images/mv02.jpg">
-				<img class="only_sp" src="/assets/images/mv02.jpg">
+				<img class="only_pc" src="/assets/images/about.png">
+				<img class="only_sp" src="/assets/images/sp_about.png">
 				<div class="slider__main-info">
 					<h3>暮らしに華を、生活に彩を<br>
 					HOMEビュッフェプレート・ネオ</h3>
@@ -65,13 +65,13 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</div>
 		</div>
 	</section>
-	<section class="pickup slider hidden" v-infocus="'showElement'">
+	<section class="pickup slider">
 		<div class="container-fluid">
 			<h2>PICK UP
 				<span class="jp">ピックアップ</span>
 			</h2>
 			<div class="row pickup__body js-slider-pickup">
-				<div class="col-sm-12 col-md-12 col-lg-4 pickup__slider" v-for="(listPickupItem, index) in listPickup" v-bind:key="index">
+				<div class="col-sm-12 col-md-12 col-lg-4 pickup__slider hidden" v-for="(listPickupItem, index) in listPickup" v-bind:key="index" v-infocus="'showElement'">
 					<a :href="listPickupItem.link">
 						<img v-bind:src= "'/assets/images/top/' + listPickupItem.image" :alt="listPickupItem.title">
 						<h3 v-html = "brTxt(listPickupItem.title)"></h3>
@@ -81,13 +81,13 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</div>
 		</div>
 	</section>
-	<section class="product hidden" v-infocus="'showElement'">
+	<section class="product">
 		<div class="container-fluid">
 			<h2 class="text-center">PRODUCTS
 				<span class="jp">おすすめの製品</span>
 			</h2>
 			<div class="row product__body">
-				<div class="col-lg-3 col-md-6 col-6"  v-for="(products, index) in products" v-bind:key="index">
+				<div class="col-lg-3 col-md-6 col-6 hidden"  v-for="(products, index) in products" v-bind:key="index" v-infocus="'showElement'">
 					<a :href="products.link">
 						<img v-bind:src= "'/assets/images/top/' + products.image" :alt="products.title">
 						<h3 v-html = "brTxt(products.title)"></h3>
@@ -101,8 +101,8 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</div>
 		</div>
 	</section>
-	<section class="about hidden" v-infocus="'showElement'">
-		<div class="about__body">
+	<section class="about">
+		<div class="about__body hidden" v-infocus="'showElement'">
 			<h3>暮らしに華を、生活に彩を。</h3>
 			<p>私たちは、日々の暮らしに華を咲かせ、<br>
 				生活の中に彩りを加える<br>
@@ -111,13 +111,13 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</p>
 		</div>
 	</section>
-	<section class="news hidden" v-infocus="'showElement'">
+	<section class="news">
 		<div class="container-fluid">
 			<h2>news
 				<span class="jp">最新のお知らせ</span>
 			</h2>
 			<div class="row news__body">
-				<div class="col-lg-4" v-for="(newsitem, index) in news" v-bind:key="index">
+				<div class="col-lg-4 hidden" v-for="(newsitem, index) in news" v-bind:key="index" v-infocus="'showElement'">
 					<div class="news__body--item">
 						<h3><a :href="newsitem.link">{{newsitem.title}}</a></h3>
 						<ul>
@@ -126,24 +126,6 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 						</ul>
 					</div>
 				</div>
-				<!-- <div class="col-lg-4">
-					<div class="news__body--item">
-						<h3><a href="">【TV放映】フジテレビ「めざましテレビ」の「スゴ撮」にて無煙グリル ゼロスモークDX(RM-103TE)が紹介されました。</a></h3>
-						<ul>
-							<li class="time">2021.05.27</li>
-							<li ><a href="" class="tag">#MEDIA</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="news__body--item">
-						<h3><a href="">【TV放映】フジテレビ「めざましテレビ」の「スゴ撮」にて無煙グリル ゼロスモークDX(RM-103TE)が紹介されました。</a></h3>
-						<ul>
-							<li class="time">2021.05.27</li>
-							<li ><a href="" class="tag">#MEDIA</a></li>
-						</ul>
-					</div>
-				</div> -->
 			</div>
 			<a href="" class="viewall">すべてのお知らせを見る</a>
 		</div>

@@ -13,12 +13,7 @@
 						</div>
 						<div class="icon-menu" @click="active = !active" :aria-pressed="active ? 'true' : 'false'">
 					        <ul>
-						        <li></li>
-						        <li></li>
-						        <li></li>
-						        <li></li>
-						        <li></li>
-						        <li></li>
+						        <li v-for="(li, index) in 6"></li>
 					      </ul>
 					    </div>
 					</div>
@@ -27,13 +22,9 @@
 			<div class="col-md-7">
 				<div class="header__right">
 					<ul>
-						<li><a href="">すべての製品</a></li>
-						<li><a href="">家事家電</a></li>
-						<li><a href="">季節家電</a></li>
-						<li><a href="">カー用品</a></li>
-						<li><a href="">雑貨</a></li>
-						<li><a href="">理美容</a></li>
-						<li><a href="">AV家電</a></li>
+						<li v-for="(headerNavItem, index) in headerNav" v-bind:key = "index">
+							<a :href="headerNavItem.link">{{headerNavItem.navItem}}</a>
+						</li>
 					</ul>
 					<div class="search">
 						<button class="btn" data-bs-toggle="modal" data-bs-target="#search" type="button"><img src="/assets/images/search.svg" alt="search"></button>
@@ -57,28 +48,22 @@
 			</li>
 		</ul>
 		<ul class="menu__sp--item">
-			<li><a  href="">すべての製品</a></li>
+			<li v-for="(headerNavItem, index) in headerNav" v-bind:key = "index" v-if="index == 0">
+				<a :href="headerNavItem.link">{{headerNavItem.navItem}}</a>
+			</li>
 		</ul>
 		<p class="catelog">カテゴリから探す</p>
 		<ul class="menu__sp--item">
-			<li><a  href="">家事家電</a></li>
-			<li><a  href="">季節家電</a></li>
-			<li><a  href="">カー用品</a></li>
-			<li><a  href="">雑貨</a></li>
-			<li><a  href="">理美容</a></li>
-			<li><a  href="">AV家電</a></li>
+			<li v-for="(headerNavItem, index) in headerNav" v-bind:key = "index" v-if="index > 0">
+				<a :href="headerNavItem.link">{{headerNavItem.navItem}}</a>
+			</li>
 		</ul>
 		<ul class="menu__sp--item_foot">
-			<li><a  href="">ご購入方法(個人様)</a></li>
-			<li><a  href="">新規お取引(企業様)</a></li>
-			<li><a  href="">メディア掲載のご依頼</a></li>
-			<li><a  href="">取扱説明書ダウンロード</a></li>
-			<li><a  href="">お知らせ</a></li>
-			<li><a  href="">会社概要</a></li>
-			<li><a  href="">お問い合わせ</a></li>
+			<li  v-for="(footerNav02Item, index) in footerNav02" v-bind:key = "index">
+				<a :href="footerNav02Item.link">{{footerNav02Item.navItem}}</a>
+			</li>
 		</ul>
 	</div>
-
 
 </header>
 <!-- modal-search -->

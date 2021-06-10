@@ -119,3 +119,7 @@ h2{
 .showElement{
   animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
 }
+
+[v-cloak] { 
+  display:none; 
+}

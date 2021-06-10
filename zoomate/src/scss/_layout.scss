@@ -22,7 +22,7 @@
 	@include media-si{
 		padding: 13px 20px 13px;
 	}
-	 .col-12{
+	.col-12{
 		@include media-si{
 			padding: 0;
 		}
@@ -84,6 +84,30 @@
 			}
 			a{
 				color: #fff;
+				position: relative;
+				
+				@include media-pc{
+					&:before{
+						position:absolute;
+						content: "";
+						width: 0%;
+						height: 1px;
+						background: $hover_nav;
+						left: 0;
+						right: 0;
+						margin: auto;
+						bottom: -6px;
+						transition: 0.3s all;
+					}
+					&:hover{
+						color: $hover_nav;
+						&:before{
+							width: 100%;
+
+						}
+					}
+
+				}
 			}
 		}
 		.search{
@@ -107,9 +131,11 @@
 		.search{
 			@include media-si{
 				margin-right: 5.3vw;
+				margin-top: 2px;
 			}
 			@include media-ip{
 				margin-right: 2.3vw;
+				margin-top: 2px;
 			}
 		}
 	}
@@ -320,7 +346,7 @@
 				max-width: 100%;
 			}
 			@include media-si{
-				width: vw(22px);
+				width: 22px;
 				max-width: 100%;
 			}
 			@include media-ip{
@@ -358,6 +384,7 @@
 		color: #fff;
 		padding: 13px 15px 13px 30px;
 		background-color: #535353;
+		border-radius: 0;
 		&:forcus{
 			box-shadow: none;
 		}
@@ -512,6 +539,26 @@
 				}
 				a{
 					color: $txt_color;
+					position: relative;
+					@include media-pc{
+						&:before{
+							position: absolute;
+						    content: "";
+						    width: 0%;
+						    height: 1px;
+						    background: $txt_color;
+						    left: 0;
+						    right: 0;
+						    margin: auto;
+						    bottom: -6px;
+						    transition: 0.3s all;
+						}
+						&:hover{
+							&:before{
+								width: 100%;
+							}
+						}
+					}
 				}
 				@include media-ip{
 					margin: 0 1.7vw 10px;
@@ -696,9 +743,25 @@
 		padding: 0;
 		img{
 			margin-bottom: 20px;
+			position: relative;
+			transition: 0.5s all;
 			@include media-si{
 				height: 100%;
 				object-fit: cover;
+				height: vw(185px);
+			}
+			@include media-pc{
+				&:hover{
+					transform: translateY(-10px);
+				}
+			}
+		}
+		@include media-si{
+			&.showElement{
+				animation: unset;
+			}
+			&.hidden{
+				opacity: 1;
 			}
 		}
 	}
@@ -745,6 +808,12 @@
 		}
 		img{
 			margin-bottom: 17px;
+			transition: 0.5s all;
+			@include media-pc{
+				&:hover{
+					transform: translateY(-10px);
+				}
+			}
 		}
 		
 	}
@@ -797,13 +866,13 @@
 	}
 	&__body{
 		position: absolute;
-	    top: 50%;
+	    top: 31%;
 	    left: 23%;
 	    margin: auto;
 	    transform: translate(0, -50%);
 	    @include media-si{
 	    	left: vw(30px);
-	    	top: 23%;
+	    	top: 15%;
 	    	transform: translate(0, -23%);
 	    }
 	    h3{
@@ -869,6 +938,7 @@
 				margin-bottom: 20px;
 				@include media-si{
 					margin-bottom: 16px;
+					@include fontSize(13px);
 				}
 				a{
 					color: $txt_color;
@@ -908,7 +978,9 @@
 		}
 	}
 	.viewall{
-		padding-right: vw(17px);
+		@include media-si{
+			padding-right: vw(17px);
+		}
 	}
 }
 
@@ -925,15 +997,13 @@
 			position: relative;
 			width: 100%;
 			height: 100vh;
-
 			img{
 				height: 100vh;
 				object-fit: cover;
 			}
-			.only_sp{
-				display: none;
+			.only_pc{
 				@include media-si{
-					display: block;
+					display: none;
 				}
 			}
 		}
@@ -962,15 +1032,6 @@
 				line-height: 1.6;
 				@include media-si{
 					@include fontSize(18px);
-				}
-			}
-		}
-		.slick-slide{
-			.slider__main-item{
-				.only_pc{
-					@include media-si{
-						display: none;
-					}
 				}
 			}
 		}

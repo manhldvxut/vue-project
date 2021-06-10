@@ -3,9 +3,8 @@
   const data = '<?php echo DIRNAME; ?>/assets/data/data.json';
 </script>
 <!-- jquery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo DIRNAME; ?>/assets/js/common.js"></script>
 
 <!-- vue data -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
@@ -13,7 +12,9 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <!-- slick js -->
-<script src="<?php echo DIRNAME; ?>/assets/js/slick.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+
 
 <!-- data json show to page -->
 <script src="<?php echo DIRNAME; ?>/assets/js/data.js"></script>

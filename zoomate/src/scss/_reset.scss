@@ -642,3 +642,8 @@ input::placeholder{
   color: $txt_color;
   @include fontSize(14px);
 }
+.btn{
+  &:focus{
+    box-shadow:unset;
+  }
+}
