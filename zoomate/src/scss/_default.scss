@@ -123,3 +123,10 @@ h2{
 [v-cloak] { 
   display:none; 
 }
+
+.header__left{
+  h1{
+    font-size: inherit;
+    margin: 0;
+  }
+}

@@ -36,6 +36,7 @@ function showData(data){
       footerNav02: [], //type02、type03で使用
       headerNav: [], //type02、type03で使用
       active: false,
+      result: '',
     },
 
     mounted:function(){
@@ -79,6 +80,10 @@ function showData(data){
         return txt.replace(/\r?\n/g,' <br>');
       },
 
+      checkRouter: function (res) {
+        this.result = location.pathname;
+      },
+
       handleSCroll (event) {
         let header = document.querySelector(".header");
         if (window.scrollY > 650 && !header.className.includes('header--bgchange')) {
@@ -88,48 +93,6 @@ function showData(data){
         }
       },
     },
-    // updated (){
-    //   // slider pickup
-    //   $('.js-slider-pickup').slick({
-    //       dots: true,
-    //       touchThreshold : 100,
-    //       speed: 300,
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
-    //       centerMode: true,
-    //       responsive: [
-    //         {
-    //             breakpoint: 9999,
-    //             settings: "unslick"
-    //         },
-    //         {
-    //           breakpoint: 1024,
-    //           settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //             centerMode: false,
-    //           }
-    //         },
-    //         {
-    //           breakpoint: 767,
-    //           settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //           }
-    //         }
-    //       ]
-    //   });
-    //   // slider top page
-    //   $('.js-slider-top').slick({
-    //       autoplay: true,
-    //       autoplaySpeed: 3000,
-    //       dots: true,
-    //       infinite: true,
-    //       speed: 800,
-    //       fade: true,
-    //       cssEase: 'linear'
-    //     });
-    // },
     watch: {
       active: function(){
         document.body.style.overflow = this.active ? 'hidden' : ''
@@ -167,59 +130,59 @@ function showData(data){
 }
 
 function sliderTop() {
-    const slider = $(document).find('.js-slider-top');
-    let sliderCont = slider.children('*').length;
+  const slider = $(document).find('.js-slider-top');
+  let sliderCont = slider.children('*').length;
 
-    //スライダーの枚数が1より多い場合に発火
-    if (sliderCont > 1) {
-        slider.slick({
-          autoplay: true,
-          autoplaySpeed: 3000,
-          dots: true,
-          infinite: true,
-          speed: 800,
-          fade: true,
-          cssEase: 'linear'
-        });
-    }
+  //スライダーの枚数が1より多い場合に発火
+  if (sliderCont > 1) {
+    slider.slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      dots: true,
+      infinite: true,
+      speed: 800,
+      fade: true,
+      cssEase: 'linear'
+    });
+  }
 }
 
 function pickupSlider() {
-    const sliderPickup = $(document).find('.js-slider-pickup');
-    let sliderContPickup = sliderPickup.children('*').length;
+  const sliderPickup = $(document).find('.js-slider-pickup');
+  let sliderContPickup = sliderPickup.children('*').length;
 
-    //スライダーの枚数が1より多い場合に発火
-    if (sliderContPickup > 1) {
-        sliderPickup.slick({
-          dots: true,
-          touchThreshold : 100,
-          speed: 300,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          centerMode: true,
-          responsive: [
-            {
-                breakpoint: 9999,
-                settings: "unslick"
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: false,
-              }
-            },
-            {
-              breakpoint: 767,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              }
-            }
-          ]
-        });
-    }
+  //スライダーの枚数が1より多い場合に発火
+  if (sliderContPickup > 1) {
+    sliderPickup.slick({
+      dots: true,
+      touchThreshold : 100,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      centerMode: true,
+      responsive: [
+        {
+            breakpoint: 9999,
+            settings: "unslick"
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: false,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
+    });
+  }
 }
 
 
