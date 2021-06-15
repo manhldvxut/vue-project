@@ -3,12 +3,18 @@
 		<div class="row">
 			<div class="col-md-5 col-12">
 				<div class="header__left">
-					<h1>
+					<h1 v-if = " CurrentPath == '/' || CurrentPath == 'index.php' || CurrentPath == 'index' || CurrentPath == '/index.php' ">
 						<ul>
 							<li class="logo"><a href="/"><img src="/assets/images/logo-white.png" alt="ROOMMATE"></a></li>
 							<li class="shoulder"><a href="/"><img src="/assets/images/shoulder.svg" alt="shoulder"></a></li>
 						</ul>
 					</h1>
+					<h2 v-else>
+						<ul>
+							<li class="logo"><a href="/"><img src="/assets/images/logo-white.png" alt="ROOMMATE"></a></li>
+							<li class="shoulder"><a href="/"><img src="/assets/images/shoulder.svg" alt="shoulder"></a></li>
+						</ul>
+					</h2>
 					<div class="header__sp-right  only_sp">
 						<div class="search">
 							<button class="btn" data-bs-toggle="modal" data-bs-target="#search" type="button"><img src="/assets/images/search.svg" alt="search"></button>
@@ -83,4 +89,10 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- check router -->
+<div class="d-none">
+	<h1 v-if = " CurrentPath == '/' || CurrentPath == 'index.php' || CurrentPath == 'index' || CurrentPath == '/index.php' " >{{checkRouter()}}	{{CurrentPath}} index</h1>
+	<h2 v-else>{{checkRouter()}}{{CurrentPath}} Other page</h2>
 </div>

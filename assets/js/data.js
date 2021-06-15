@@ -35,8 +35,8 @@ function showData(data){
       news: [], //type02、type03で使用
       footerNav02: [], //type02、type03で使用
       headerNav: [], //type02、type03で使用
-      active: false,
-      result: '',
+      active: false,  // active when click
+      CurrentPath: '', // check path
     },
 
     mounted:function(){
@@ -80,8 +80,8 @@ function showData(data){
         return txt.replace(/\r?\n/g,' <br>');
       },
 
-      checkRouter: function (res) {
-        this.result = location.pathname;
+      checkRouter: function () { // check path
+        this.CurrentPath = location.pathname;
       },
 
       handleSCroll (event) {

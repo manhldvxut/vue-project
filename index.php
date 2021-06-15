@@ -129,8 +129,10 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</div>
 			<a href="" class="viewall">すべてのお知らせを見る</a>
 		</div>
-	</section>	
+	</section>
+
 </main>
+
 
 
 

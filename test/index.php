@@ -131,12 +131,13 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 		</div>
 	</section>
 
-	<p>{{result}}{{checkRouter(res)}}</p>
 	
 	
 </main>
 
 
+	<!-- <p v-if = " CurrentPath == '/' " >{{checkRouter()}}	{{CurrentPath}} index</p>
+	<p :class='CurrentPath' v-else>{{checkRouter()}}{{CurrentPath}} test</p> -->
 
 
 

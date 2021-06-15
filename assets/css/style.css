@@ -1026,7 +1026,7 @@ h2 .jp {
   display: none;
 }
 
-.header__left h1 {
+.header__left h1, .header__left h2 {
   font-size: inherit;
   margin: 0;
 }
