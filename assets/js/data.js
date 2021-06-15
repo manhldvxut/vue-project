@@ -84,8 +84,8 @@ function showData(data){
         this.CurrentPath = location.pathname;
       },
 
-      handleSCroll (event) {
-        let header = document.querySelector(".header");
+      handleSCroll: function () {
+        var header = document.getElementById("Header");
         if (window.scrollY > 650 && !header.className.includes('header--bgchange')) {
         header.classList.add('header--bgchange'); 
         } else if (window.scrollY < 650) {
@@ -98,17 +98,17 @@ function showData(data){
         document.body.style.overflow = this.active ? 'hidden' : ''
       },
     },
-    created(){
+    created: function(){
       window.addEventListener('scroll', this.handleSCroll);
     },
-    destroyed(){
+    destroyed: function(){
       window.removeEventListener('scroll', this.handleSCroll);
     },
     directives: { // scroll fade in
       infocus: {
         isLiteral: true,
-        inserted: (el, binding, vnode) => {
-          let f = () => {
+        inserted: function(el, binding, vnode) {
+          let f = function() {
             let rect = el.getBoundingClientRect()
             let inView = (
               rect.width > 0 &&
