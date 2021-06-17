@@ -100,7 +100,7 @@
 						transition: 0.3s all;
 					}
 					&:hover{
-						color: $hover_nav;
+						//color: $hover_nav;
 						&:before{
 							width: 100%;
 
@@ -540,6 +540,7 @@
 				a{
 					color: $txt_color;
 					position: relative;
+					transition: 0.3s all;
 					@include media-pc{
 						&:before{
 							position: absolute;
@@ -554,8 +555,10 @@
 						    transition: 0.3s all;
 						}
 						&:hover{
+							color: #fff;
+							opacity: 1;
 							&:before{
-								width: 100%;
+								//width: 100%;
 							}
 						}
 					}
@@ -705,9 +708,12 @@
     		color:$private;
     		border-color: $private;
     		border-radius: 0;
+    		background-color: #fff;
+    		opacity: 1;
     	}
     }
 }
+
 
 
 // pick up
@@ -742,18 +748,12 @@
 	&__slider{
 		padding: 0;
 		img{
-			margin-bottom: 20px;
 			position: relative;
-			transition: 0.5s all;
+			transition: transform 0.3s linear;
 			@include media-si{
 				height: 100%;
 				object-fit: cover;
 				height: vw(185px);
-			}
-			@include media-pc{
-				&:hover{
-					transform: translateY(-10px);
-				}
 			}
 		}
 		@include media-si{
@@ -762,6 +762,24 @@
 			}
 			&.hidden{
 				opacity: 1;
+			}
+		}
+		h3{
+			margin-top: 20px;
+			transition: 0.3s all;
+			@include media-pc{
+				&:hover{
+					opacity: 0.8;
+				}
+			}
+		}
+		@include media-pc{
+			.hover_scale{
+				&:hover{
+					img{
+						transform: scale(1.03);
+					}
+				}
 			}
 		}
 	}
@@ -802,16 +820,14 @@
 			@include fontSize(14px);
 			text-align: center;
 			line-height: 1.7;
+			margin-top: 13px;
+			transform: 0.3s all;
 			@include media-si{
 				@include fontSize(13px);
 			}
-		}
-		img{
-			margin-bottom: 17px;
-			transition: 0.5s all;
 			@include media-pc{
 				&:hover{
-					transform: translateY(-10px);
+					opacity: 0.7;
 				}
 			}
 		}
@@ -928,11 +944,33 @@
 		&--item{
 			border-top: 1px solid $txt_color;
 			padding-top: 12px;
+			transition: 0.5s all;
+			position: relative;
+			&:before{
+				transition: 0.5s all;
+				@extend %pos;
+				width: 0;
+				height: 1px;
+				background: $private;
+				top: -1px;
+				left: 0;
+			}
 			@include media-si{
 				padding-top: 20px;
 				padding-left: 18px;
 				padding-right: 18px;
 				margin-bottom: 35px;
+			}
+			@include media-pc{
+				&:hover{
+					a{
+						color: $private;
+						opacity: 1;
+					}
+					&:before{
+						width: 100%;
+					}
+				}
 			}
 			h3{
 				margin-bottom: 20px;
@@ -1123,6 +1161,37 @@
 		}
 		&:last-child{
 			padding-right:0;
+		}
+	}
+}
+
+// content page
+.count{
+	&__item{
+		display: flex;
+		justify-content: flex-end;
+		@include fontSize(16px);
+		font-family: $font_en;
+		margin-top: -20px;
+		margin-bottom: 40px;
+	}
+}
+.new__mask{
+	@include fontSize(12px);
+	font-family: $font_en;
+	color: #68B4BA;
+	letter-spacing: 0px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 8px;
+	left: 2.5vw;
+	z-index: 1;
+}
+.housework{
+	.product__body{
+		max-width: inherit;
+		&.m-30{
+			margin: 0 -1.875vw;
 		}
 	}
 }

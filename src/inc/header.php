@@ -11,8 +11,8 @@
 					</h1>
 					<h2 v-else>
 						<ul>
-							<li class="logo"><a href="/"><img src="/assets/images/logo-white.png" alt="ROOMMATE"></a></li>
-							<li class="shoulder"><a href="/"><img src="/assets/images/shoulder.svg" alt="shoulder"></a></li>
+							<li class="logo"><a href="/"><img src="/assets/images/logo.png" alt="ROOMMATE"></a></li>
+							<!-- <li class="shoulder"><a href="/"><img src="/assets/images/shoulder.svg" alt="shoulder"></a></li> -->
 						</ul>
 					</h2>
 					<div class="header__sp-right  only_sp">
@@ -35,7 +35,10 @@
 						</li>
 					</ul>
 					<div class="search">
-						<button class="btn" data-bs-toggle="modal" data-bs-target="#search" type="button"><img src="/assets/images/search.svg" alt="search"></button>
+						<button  class="btn" data-bs-toggle="modal" data-bs-target="#search" type="button">
+							<img src="/assets/images/search.svg" alt="search" v-if = " CurrentPath == '/' || CurrentPath == 'index.php' || CurrentPath == 'index' || CurrentPath == '/index.php' ">
+							<img src="/assets/images/search-black.svg" alt="search" v-else>
+						</button>
 					</div>
 				</div>
 			</div>

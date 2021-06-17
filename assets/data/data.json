@@ -1,7 +1,7 @@
 [
     {
       "category": "header_nav02",
-      "link" : "/",
+      "link" : "/products",
       "navItem" : "すべての製品"
     },
     {
@@ -104,6 +104,18 @@
       "link" : "/",
       "image": "prd03.png",
       "title": "コンパクト炊飯器\nGOHANDAKI"
+    },
+    {
+      "category": "product",
+      "link" : "/",
+      "image": "prd03.png",
+      "title": "コンパクト炊飯器\nGOHANDAKI"
+    },
+    {
+      "category": "product",
+      "link" : "/",
+      "image": "prd04.png",
+      "title": "ホームメイドアイスメーカー\nネオ"
     },
     {
       "category": "product",

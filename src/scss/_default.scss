@@ -108,11 +108,26 @@ h2{
     @include fontSize(12px);
   }
   &:hover{
-    transform: translateX(10px);
+    //transform: translateX(10px);
     color: $private;
   }
 }
-
+// hover
+.hover{
+  &_scale{
+    overflow: hidden;
+    @include media-pc{
+      &:hover{
+        img{
+          transform: scale(1.08);
+        }
+      }
+    }
+    img{
+      transition: transform 0.3s linear;
+    }
+  }
+}
 .hidden {
   opacity: 0;
 }
@@ -129,4 +144,30 @@ h2{
     font-size: inherit;
     margin: 0;
   }
+}
+.content{
+  .header__right{
+    li a{
+      color: $private;
+    }
+  }
+  &__page{
+    margin-top: 180px;
+    @include media-pc{
+      max-width: 67.5vw;
+      margin: 180px auto 100px;
+    }
+    h2{
+      @include fontSize(28px);
+      color: $private;
+      font-weight: bold;
+    }
+  }
+}
+
+.p-30{
+  padding: 0 1.875vw;
+}
+.m-30{
+  margin: 0 -1.875vw;
 }

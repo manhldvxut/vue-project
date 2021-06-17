@@ -1,4 +1,4 @@
-/*  stack
+ /*  stack
 ------------------------------------------------------------------------------------------------------------------------*/
 var intViewportWidth = window.innerWidth;
 
@@ -86,11 +86,21 @@ function showData(data){
 
       handleSCroll: function () {
         var header = document.getElementById("Header");
-        if (window.scrollY > 650 && !header.className.includes('header--bgchange')) {
-        header.classList.add('header--bgchange'); 
-        } else if (window.scrollY < 650) {
-          header.classList.remove('header--bgchange');
+        if(intViewportWidth > 767){ // pc scroll
+          if (window.scrollY > 650 && !header.className.includes('header--bgchange')) {
+          header.classList.add('header--bgchange'); 
+          } else if (window.scrollY < 650) {
+            header.classList.remove('header--bgchange');
+          }
+        }else{ // sp scroll
+          if (window.scrollY > 250 && !header.className.includes('header--bgchange')) {
+          header.classList.add('header--bgchange'); 
+          } else if (window.scrollY < 250) {
+            header.classList.remove('header--bgchange');
+          }
         }
+        
+
       },
     },
     watch: {

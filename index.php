@@ -73,7 +73,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			<div class="row pickup__body js-slider-pickup">
 				<div class="col-sm-12 col-md-12 col-lg-4 pickup__slider hidden" v-for="(listPickupItem, index) in listPickup" v-bind:key="index" v-infocus="'showElement'">
 					<a :href="listPickupItem.link">
-						<img v-bind:src= "'/assets/images/top/' + listPickupItem.image" :alt="listPickupItem.title">
+						<div class="hover_scale"><img v-bind:src= "'/assets/images/top/' + listPickupItem.image" :alt="listPickupItem.title"></div>
 						<h3 v-html = "brTxt(listPickupItem.title)"></h3>
 					</a>
 				</div>
@@ -87,17 +87,15 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 				<span class="jp">おすすめの製品</span>
 			</h2>
 			<div class="row product__body">
-				<div class="col-lg-3 col-md-6 col-6 hidden"  v-for="(products, index) in products" v-bind:key="index" v-infocus="'showElement'">
+				<div class="col-lg-3 col-md-6 col-6 hidden"  v-for="(products, index) in products" v-bind:key="index"  v-infocus="'showElement'">
 					<a :href="products.link">
-						<img v-bind:src= "'/assets/images/top/' + products.image" :alt="products.title">
+						<div class="hover_scale"><img v-bind:src= "'/assets/images/top/' + products.image" :alt="products.title"></div>
 						<h3 v-html = "brTxt(products.title)"></h3>
 					</a>
 				</div>
 			</div>
 			<div class="btn-holder text-center">
-				<a href="" class="btn hover_all">
-				    <span>すべての製品を見る</span>
-				</a>
+				<a href="/products/" class="btn hover_all"> <span>すべての製品を見る</span></a>
 			</div>
 		</div>
 	</section>

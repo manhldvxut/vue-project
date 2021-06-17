@@ -43,7 +43,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 ?>
 
 <main class="main-contents">
-	<section class="slider__main slider">
+	<section class="slider__main slider " >
 		<div class="js-slider-top">
 			<div class="slider__main-item">
 				<img class="only_pc" src="/assets/images/mv.png">
@@ -67,7 +67,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 	</section>
 	<section class="pickup slider">
 		<div class="container-fluid">
-			<h2>PICK UP
+			<h2 id="aaa">PICK UP
 				<span class="jp">ピックアップ</span>
 			</h2>
 			<div class="row pickup__body js-slider-pickup">
@@ -89,13 +89,13 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			<div class="row product__body">
 				<div class="col-lg-3 col-md-6 col-6 hidden"  v-for="(products, index) in products" v-bind:key="index" v-infocus="'showElement'">
 					<a :href="products.link">
-						<img v-bind:src= "'/assets/images/top/' + products.image" :alt="products.title">
+						<div class="hove_scale"><img v-bind:src= "'/assets/images/top/' + products.image" :alt="products.title"></div>
 						<h3 v-html = "brTxt(products.title)"></h3>
 					</a>
 				</div>
 			</div>
 			<div class="btn-holder text-center">
-				<a href="" class="btn hover_all">
+				<a href="#aaa" class="btn hover_all" @click="scrollToTop()">
 				    <span>すべての製品を見る</span>
 				</a>
 			</div>
