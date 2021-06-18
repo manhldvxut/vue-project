@@ -153,21 +153,88 @@ h2{
   }
   &__page{
     margin-top: 180px;
+    position: relative;
     @include media-pc{
       max-width: 67.5vw;
       margin: 180px auto 100px;
+    }
+    @include media-si{
+      padding: 0;
+      margin-top: vw(90px);
+      max-width: 100%;
     }
     h2{
       @include fontSize(28px);
       color: $private;
       font-weight: bold;
+      @include media-si{
+        @include fontSize(24px);
+        padding-right: var(--bs-gutter-x,.75rem);
+        padding-left: var(--bs-gutter-x,.75rem);
+      }
+    }
+    .count__item{
+      @include media-si{
+        padding-right: var(--bs-gutter-x,.75rem);
+        padding-left: var(--bs-gutter-x,.75rem);
+      }
+    }
+    &--product_detail{
+      max-width: 100%;
+      margin: 150px auto 100px;
+    }
+  }
+  &__header-bg{
+    .header--bgchange{
+      background-color: rgba(255,255,255,0.8);
+      box-shadow: 0 3px 5px rgba(57, 63, 72, 0.1);
+    }
+    .icon-menu ul li{
+      @include media-si{
+        background-color: $private;
+      }
     }
   }
 }
 
 .p-30{
   padding: 0 1.875vw;
+  @include media-si{
+    padding: 0;
+  }
 }
 .m-30{
   margin: 0 -1.875vw;
+  @include media-si{
+    margin:  0;
+  }
+}
+
+.p-40{
+  padding: 0 2.5vw;
+  @include media-si{
+    padding: 0;
+  }
+}
+.m-40{
+  margin: 0 -2.5vw;
+  @include media-si{
+    margin:  0;
+  }
+}
+.dl-horizontal{
+  display: flex;
+  flex-wrap: wrap;
+  @include fontSize(13px);
+  color: $private;
+  dt{
+    width: 25%;
+  }
+  dd{
+    width: 75%;
+  }
+  dt, dd{
+    padding: 30px 10px 30px 20px;
+    border-top: 1px solid #D6D6D6;
+  }
 }

@@ -32,3 +32,23 @@
         opacity: 1;
     }
 }
+
+// run new mask
+
+@keyframes header_off1 {
+    0% {
+        left: -10%;
+        opacity: 0
+    }
+
+    15%,
+    85% {
+        left: 0;
+        opacity: 1
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0
+    }
+}

@@ -17,7 +17,12 @@
 					</h2>
 					<div class="header__sp-right  only_sp">
 						<div class="search">
-							<button class="btn" data-bs-toggle="modal" data-bs-target="#search" type="button"><img src="/assets/images/search.svg" alt="search"></button>
+							<button class="btn" data-bs-toggle="modal" data-bs-target="#search" type="button" v-if = " CurrentPath == '/' || CurrentPath == 'index.php' || CurrentPath == 'index' || CurrentPath == '/index.php' ">
+								<img src="/assets/images/search.svg" alt="search">
+							</button>
+							<button class="btn" data-bs-toggle="modal" data-bs-target="#search" type="button" v-else>
+								<img class="only_sp" src="/assets/images/search-black.svg" alt="search">
+							</button>
 						</div>
 						<div class="icon-menu" @click="active = !active" :aria-pressed="active ? 'true' : 'false'">
 					        <ul>

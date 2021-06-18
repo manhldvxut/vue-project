@@ -40,7 +40,7 @@ function showData(data){
     },
 
     mounted:function(){
-      
+
       // products〜03の整形。カテゴリー数に応じて増減する。
       let arrPickup = new Array(),
           arr01 = new Array(),
@@ -82,6 +82,9 @@ function showData(data){
 
       checkRouter: function () { // check path
         this.CurrentPath = location.pathname;
+        if(this.CurrentPath !='/'){ // changer background other page and add class other page
+          document.body.classList.add('content__header-bg')
+        }
       },
 
       handleSCroll: function () {
@@ -139,6 +142,8 @@ function showData(data){
   })
 }
 
+
+
 function sliderTop() {
   const slider = $(document).find('.js-slider-top');
   let sliderCont = slider.children('*').length;
@@ -194,5 +199,3 @@ function pickupSlider() {
     });
   }
 }
-
-
