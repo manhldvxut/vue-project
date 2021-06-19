@@ -45,17 +45,13 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 ?>
 
 <main class="main-contents">
-<div class="col-lg-4 col-md-6 col-6 hidden p-30"  v-for="(products, index) in convertProduct" v-bind:key="index" v-infocus="'showElement'">
-<p>{{products.id}}</p>
+<!-- <div class=""  v-for="(products, index) in convertProduct" v-bind:key="index" v-if=" id == index + 1 ">
+<p>{{products.title}}</p>
 </div>
-
-<div>
-	<p>San pham chi tiet</p>
-	<p>Ten san pham {{currentProduct.title}}</p>
-</div>
+{{id}} -->
 
 
-	<div class="container-fluid content__page content__page--product_detail">
+	<div class="container-fluid content__page content__page--product_detail" v-for="(products, index) in convertProduct" v-bind:key="index" v-if=" id == index + 1 ">
 		<section class="product__detail">
 			<div class="row">
 				<div class="col-lg-4 fx_left">
@@ -63,19 +59,20 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 						<a class="product__detail-info--title" href="">家事家電</a>
 						<div class="product__detail-info_head">
 							<span class="new__mask">new <i class="line-run"></i></span>
-							<h1>無煙グリル調理器ゼロスモークDX</h1>
+							<h1>{{products.title}}</h1>
 							<div class="product__detail-code">RM-103TE</div>
 						</div>
 						<div class="product__detail-info_review">
-							<h3>煙を出さずに調理ができるグリル調理器</h3>
-							<p>吸煙ファンの力でけむりを循環吸引、<br>けむりやニオイを気にせずグリルを楽しめる調理器です。</p>
+							<h3 v-html = "brTxt(products.h3)"></h3>
+							<p  v-html = "brTxt(products.h3Info)"></p>
 						</div>
-						<a href="" class="btn btn__amazon">Amazonで購入</a>
+						<a :href="products.amazonLink" class="btn btn__amazon">Amazonで購入</a>
+						
 					</div>
 				</div>
 				<div class="col-lg-8 fx_right">
 					<div class="product__detail-img">
-						<img src="/assets/images/top/prd01.png">
+						<img :src="'/assets/images/top/' + products.image">
 					</div>
 				</div>
 			</div>

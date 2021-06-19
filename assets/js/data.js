@@ -38,6 +38,7 @@ function showData(data){
       active: false,  // active when click
       CurrentPath: '', // check path
       currentProduct: null,
+      id: '',
     },
 
     mounted:function(){
@@ -117,15 +118,15 @@ function showData(data){
       
       try {
         const route  = window.location.href.split('?')[1];
-        console.log(route)
+        
         const id = route.split('=')[1];
-
+        console.log(id)
         this.id = id;
 
-        fetch(`/api/product.php?id=${this.id}`)
-        .then(response => response.json())
-        .then(data => this.currentProduct = data)
-        .catch(err => console.log(err));
+        // fetch(`/api/product.php?id=${this.id}`)
+        // .then(response => response.json())
+        // .then(data => this.currentProduct = data)
+        // .catch(err => console.log(err));
 
       } catch(e){
 
