@@ -74,6 +74,7 @@ function showData(data){
       this.footerNav02 = arr03;
       this.headerNav = arr04;
 
+
       return;
     },
     methods: {
@@ -106,7 +107,8 @@ function showData(data){
         }
         
 
-      },
+      }
+
     },
     watch: {
       active: function(){
@@ -115,13 +117,14 @@ function showData(data){
     },
     created: function(){
       window.addEventListener('scroll', this.handleSCroll);
-      
-      try {
+
+      try { // pass id
         const route  = window.location.href.split('?')[1];
         
         const id = route.split('=')[1];
-        console.log(id)
         this.id = id;
+
+        
 
         // fetch(`/api/product.php?id=${this.id}`)
         // .then(response => response.json())
@@ -129,11 +132,8 @@ function showData(data){
         // .catch(err => console.log(err));
 
       } catch(e){
-
+        console.log(e)
       }
-
-      
-      
     },
     destroyed: function(){
       window.removeEventListener('scroll', this.handleSCroll);
@@ -161,7 +161,7 @@ function showData(data){
       }
     },
     computed: {
-      convertProduct(){
+      convertProduct(){  // render product in id link
         return this.products.map(item => {
           return {
             ...item,

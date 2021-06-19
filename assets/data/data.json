@@ -89,7 +89,7 @@
     },
     {
       "category": "news",
-      "link" : "/",
+      "link" : "https://google.com",
       "title": "【TV放映】フジテレビ「めざましテレビ」の「スゴ撮」にて無煙グリル ゼロスモークDX(RM-103TE)が紹介されました。",
       "time" : "2021.05.27",
       "tag" : "#MEDIA"
@@ -116,7 +116,7 @@
       "title": "無煙グリル調理器\nゼロスモークDX",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品01",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品01",
-      "amazonLink" : "amazon.co.jp",
+      "amazonLink" : "https://www.amazon.co.jp/",
       "productReview" : [
         {
           "productReviewImg" : "images"
@@ -131,7 +131,7 @@
       "title": "温調付き3枚プレート\nホットプレートミックス",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品02",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品02",
-      "amazonLink" : "amazon.co.jp"
+      "amazonLink" : "https://www.amazon.co.jp/"
     },
     {
       "id" : 3,
@@ -141,7 +141,7 @@
       "title": "コンパクト炊飯器\nGOHANDAKI",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品03",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品03",
-      "amazonLink" : "amazon.co.jp"
+      "amazonLink" : "https://www.amazon.co.jp/"
     },
     {
       "id" : 4,
@@ -151,7 +151,7 @@
       "title": "ホームメイドアイスメーカー\nネオ",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品04",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品04",
-      "amazonLink" : "amazon.co.jp"
+      "amazonLink" : "https://www.amazon.co.jp/"
       
     },
     {
@@ -162,7 +162,7 @@
       "title": "ホームメイドアイスメーカー\nネオ",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品05",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品05",
-      "amazonLink" : "amazon.co.jp"
+      "amazonLink" : "https://www.amazon.co.jp/"
       
     },
     {
@@ -173,7 +173,7 @@
       "title": "ホームメイドアイスメーカー\nネオ",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品06",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品06",
-      "amazonLink" : "amazon.co.jp"
+      "amazonLink" : "https://www.amazon.co.jp/"
       
     },
     {
@@ -184,7 +184,7 @@
       "title": "ホームメイドアイスメーカー\nネオ",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品07",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品07",
-      "amazonLink" : "amazon.co.jp"
+      "amazonLink" : "https://www.amazon.co.jp/"
       
     },
     {
@@ -195,7 +195,7 @@
       "title": "ホームメイドアイスメーカー\nネオ",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品08",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品08",
-      "amazonLink" : "amazon.co.jp"
+      "amazonLink" : "https://www.amazon.co.jp/"
       
     },
     {
@@ -206,7 +206,7 @@
       "title": "ホームメイドアイスメーカー\nネオ",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品09",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品09",
-      "amazonLink" : "amazon.co.jp"
+      "amazonLink" : "https://www.amazon.co.jp/"
       
     },
     {
@@ -217,7 +217,7 @@
       "title": "ホームメイドアイスメーカー\nネオ",
       "h3" : "煙を出さずに調理ができるグリル調理器 商品10",
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品10",
-      "amazonLink" : "amazon.co.jp"
+      "amazonLink" : "https://www.amazon.co.jp/"
       
     }
 ]

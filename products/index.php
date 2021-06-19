@@ -49,7 +49,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			<h2>家事家電</h2>
 			<div class="count__item">{{products.length}} Items</div>
 			<div class="row product__body m-30">
-				<div class="col-lg-4 col-md-6 col-6 hidden p-30"  v-for="(products, index) in convertProduct" v-bind:key="index" v-infocus="'showElement'">
+				<div class="col-lg-4 col-md-6 col-6 hidden p-30"  v-for="(products, index) in convertProduct.slice().reverse()" v-bind:key="index" v-infocus="'showElement'" >
 					<span class="new__mask">new <i class="line-run"></i></span>
 					<a :href="products.link">
 						<div class="hover_scale"><img v-bind:src= " '/assets/images/top/' + products.image" :alt="products.title"></div>

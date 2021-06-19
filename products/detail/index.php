@@ -66,7 +66,8 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 							<h3 v-html = "brTxt(products.h3)"></h3>
 							<p  v-html = "brTxt(products.h3Info)"></p>
 						</div>
-						<a :href="products.amazonLink" class="btn btn__amazon">Amazonで購入</a>
+
+						<a :href="products.amazonLink" target="_blank" class="btn btn__amazon">Amazonで購入</a>
 						
 					</div>
 				</div>
