@@ -1,5 +1,7 @@
 <?php
 
+
+
 include_once $_SERVER['DOCUMENT_ROOT'].'/src/inc/global-config.php';
 //下記のパス「demo」を変更
 include_once $_SERVER['DOCUMENT_ROOT'].'/src/inc/config.php';
@@ -43,7 +45,16 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 ?>
 
 <main class="main-contents">
-	
+<div class="col-lg-4 col-md-6 col-6 hidden p-30"  v-for="(products, index) in convertProduct" v-bind:key="index" v-infocus="'showElement'">
+<p>{{products.id}}</p>
+</div>
+
+<div>
+	<p>San pham chi tiet</p>
+	<p>Ten san pham {{currentProduct.title}}</p>
+</div>
+
+
 	<div class="container-fluid content__page content__page--product_detail">
 		<section class="product__detail">
 			<div class="row">

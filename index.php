@@ -87,7 +87,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 				<span class="jp">おすすめの製品</span>
 			</h2>
 			<div class="row product__body">
-				<div class="col-lg-3 col-md-6 col-6 hidden"  v-for="(products, index) in products" v-bind:key="index" v-if="index <= 3"  v-infocus="'showElement'">
+				<div class="col-lg-3 col-md-6 col-6 hidden"  v-for="(products, index) in convertProduct" v-bind:key="index" v-if="index <= 3"  v-infocus="'showElement'">
 					<a :href="products.link">
 						<div class="hover_scale"><img v-bind:src= "'/assets/images/top/' + products.image" :alt="products.title"></div>
 						<h3 v-html = "brTxt(products.title)"></h3>

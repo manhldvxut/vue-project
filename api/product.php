@@ -1,92 +1,6 @@
-[
-    {
-      "category": "header_nav02",
-      "link" : "/products",
-      "navItem" : "すべての製品"
-    },
-    {
-      "category": "header_nav02",
-      "link" : "/",
-      "navItem" : "家事家電"
-    },
-    {
-      "category": "header_nav02",
-      "link" : "/",
-      "navItem" : "季節家電"
-    },
-    {
-      "category": "header_nav02",
-      "link" : "/",
-      "navItem" : "カー用品"
-    },
-    {
-      "category": "header_nav02",
-      "link" : "/",
-      "navItem" : "雑貨"
-    },
-    {
-      "category": "header_nav02",
-      "link" : "/",
-      "navItem" : "理美容"
-    },
-    {
-      "category": "header_nav02",
-      "link" : "/",
-      "navItem" : "AV家電"
-    },
-    {
-      "category": "footer_nav02",
-      "link" : "/",
-      "navItem" : "ご購入方法(個人様)"
-    },
-    {
-      "category": "footer_nav02",
-      "link" : "/",
-      "navItem" : "新規お取引(企業様)"
-    },
-    {
-      "category": "footer_nav02",
-      "link" : "/",
-      "navItem" : "メディア掲載のご依頼"
-    },
-    {
-      "category": "footer_nav02",
-      "link" : "/",
-      "navItem" : "取扱説明書ダウンロード"
-    },
-    {
-      "category": "footer_nav02",
-      "link" : "/",
-      "navItem" : "お知らせ"
-    },
-    {
-      "category": "footer_nav02",
-      "link" : "/",
-      "navItem" : "会社概要"
-    },
-    {
-      "category": "footer_nav02",
-      "link" : "/",
-      "navItem" : "お問い合わせ"
-    },
-    {
-      "category": "pickup",
-      "link" : "/",
-      "image": "pickup01.png",
-      "title": "いつでもどこでも、大活躍。 \nポータブルAV家電最新アイテム特集"
-    },
-    {
-      "category": "pickup",
-      "link" : "/",
-      "image": "pickup02.png",
-      "title": "ROOMMATEがおすすめする\n最新の調理家電アイテム"
-    },
-    {
-      "category": "pickup",
-      "link" : "/",
-      "image": "pickup03.png",
-      "title": "暮らしにいいもの、集めました。\n製品ラインナップ"
-    },
+<?php 
+
+$data = json_decode('[
     {
       "category": "product",
       "link" : "/",
@@ -178,4 +92,20 @@
       "time" : "2021.05.27",
       "tag" : "#MEDIA"
     }
-]
+]',true);
+
+
+$id = $_GET['id'];
+
+$result = null;
+
+foreach($data as $item){
+   if(isset($item['id']) && $item['id'] == $id){
+       $result = $item;
+   }
+}
+
+echo json_encode($result);
+
+
+?>
