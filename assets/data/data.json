@@ -6,32 +6,32 @@
     },
     {
       "category": "header_nav02",
-      "link" : "/",
+      "link" : "/products/家事家電",
       "navItem" : "家事家電"
     },
     {
       "category": "header_nav02",
-      "link" : "/",
+      "link" : "/products/季節家電",
       "navItem" : "季節家電"
     },
     {
       "category": "header_nav02",
-      "link" : "/",
+      "link" : "/products/カー用品",
       "navItem" : "カー用品"
     },
     {
       "category": "header_nav02",
-      "link" : "/",
+      "link" : "/products/雑貨",
       "navItem" : "雑貨"
     },
     {
       "category": "header_nav02",
-      "link" : "/",
+      "link" : "/products/理美容",
       "navItem" : "理美容"
     },
     {
       "category": "header_nav02",
-      "link" : "/",
+      "link" : "/products/AV家電",
       "navItem" : "AV家電"
     },
     {
@@ -111,6 +111,7 @@
     {
       "id" : 1,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd01.png",
       "title": "無煙グリル調理器\nゼロスモークDX",
@@ -126,6 +127,7 @@
     {
       "id" : 2,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd02.png",
       "title": "温調付き3枚プレート\nホットプレートミックス",
@@ -136,6 +138,7 @@
     {
       "id" : 3,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd03.png",
       "title": "コンパクト炊飯器\nGOHANDAKI",
@@ -146,6 +149,7 @@
     {
       "id" : 4,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd04.png",
       "title": "ホームメイドアイスメーカー\nネオ",
@@ -157,6 +161,7 @@
     {
       "id" : 5,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd04.png",
       "title": "ホームメイドアイスメーカー\nネオ",
@@ -168,6 +173,7 @@
     {
       "id" : 6,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd04.png",
       "title": "ホームメイドアイスメーカー\nネオ",
@@ -179,6 +185,7 @@
     {
       "id" : 7,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd01.png",
       "title": "ホームメイドアイスメーカー\nネオ",
@@ -190,6 +197,7 @@
     {
       "id" : 8,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd02.png",
       "title": "ホームメイドアイスメーカー\nネオ",
@@ -201,6 +209,7 @@
     {
       "id" : 9,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd03.png",
       "title": "ホームメイドアイスメーカー\nネオ",
@@ -212,6 +221,7 @@
     {
       "id" : 10,
       "category": "product",
+      "product_type" : "家事家電", 
       "link" : "/",
       "image": "prd04.png",
       "title": "ホームメイドアイスメーカー\nネオ",
@@ -219,5 +229,39 @@
       "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品10",
       "amazonLink" : "https://www.amazon.co.jp/"
       
+    },
+    {
+      "id" : 11,
+      "category": "product",
+      "product_type" : "季節家電", 
+      "link" : "/",
+      "image": "prd04.png",
+      "title": "ホームメイドアイスメーカー\nネオ",
+      "h3" : "煙を出さずに調理ができるグリル調理器 商品10",
+      "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品10",
+      "amazonLink" : "https://www.amazon.co.jp/"
+      
+    },
+    {
+      "id" : 12,
+      "category": "product",
+      "product_type" : "季節家電", 
+      "link" : "/",
+      "image": "prd04.png",
+      "title": "ホームメイドアイスメーカー\nネオ",
+      "h3" : "煙を出さずに調理ができるグリル調理器 商品10",
+      "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品10",
+      "amazonLink" : "https://www.amazon.co.jp/"
+    },
+    {
+      "id" : 13,
+      "category": "product",
+      "product_type" : "季節家電", 
+      "link" : "/",
+      "image": "prd04.png",
+      "title": "ホームメイドアイスメーカー\nネオ",
+      "h3" : "煙を出さずに調理ができるグリル調理器 商品10",
+      "h3Info" : "吸煙ファンの力でけむりを循環吸引、\nけむりやニオイを気にせずグリルを楽しめる調理器です。商品10",
+      "amazonLink" : "https://www.amazon.co.jp/"
     }
 ]

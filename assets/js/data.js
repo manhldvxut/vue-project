@@ -39,6 +39,8 @@ function showData(data){
       CurrentPath: '', // check path
       currentProduct: null,
       id: '',
+      count: '',
+
     },
 
     mounted:function(){
@@ -74,8 +76,11 @@ function showData(data){
       this.footerNav02 = arr03;
       this.headerNav = arr04;
 
-
+      
+      
       return;
+
+      
     },
     methods: {
       // <br>タグ対応
@@ -89,6 +94,7 @@ function showData(data){
           document.body.classList.add('content__header-bg')
         }
       },
+
 
       handleSCroll: function () {
         var header = document.getElementById("Header");
@@ -111,12 +117,16 @@ function showData(data){
 
     },
     watch: {
+      
       active: function(){
         document.body.style.overflow = this.active ? 'hidden' : ''
       },
+      
     },
     created: function(){
       window.addEventListener('scroll', this.handleSCroll);
+
+      
 
       try { // pass id
         const route  = window.location.href.split('?')[1];
@@ -161,6 +171,7 @@ function showData(data){
       }
     },
     computed: {
+      
       convertProduct(){  // render product in id link
         return this.products.map(item => {
           return {
@@ -168,7 +179,16 @@ function showData(data){
             link: `/products/detail?id=${item.id}`
           }
         })
-      }
+      },
+      fitter_productType(){ // remove product_type duplicates
+        return [...new Map(this.products.map(item => [item.product_type, item])).values()];
+      },
+    },
+    updated(){
+      var ElLength = document.getElementsByClassName('aa').length;
+      console.log('ElLength = ' + ElLength);
+
+      this.count = ElLength;
     }
   })
 }
