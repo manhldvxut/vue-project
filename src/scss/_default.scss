@@ -158,12 +158,25 @@ h2{
       max-width: 67.5vw;
       margin: 180px auto 100px;
     }
+    &.page_buyguide{
+      @include media-pro{
+        max-width: 94.5vw;
+      }
+      
+    }
+    &.fx_ctxt{
+       margin-top: 80px;
+       @include media-sp{
+        margin-top: 40px;
+      }
+    }
+    
     @include media-si{
       padding: 0;
       margin-top: vw(90px);
       max-width: 100%;
     }
-    h2{
+    h2, h1{
       @include fontSize(28px);
       color: $private;
       font-weight: bold;
@@ -182,6 +195,13 @@ h2{
     &--product_detail{
       max-width: 100%;
       margin: 150px auto 100px;
+      @include media-pc{
+        padding-right: 0;
+      }
+      @include media-sp{
+        margin-top: 90px;
+        margin-bottom: 60px;
+      }
     }
   }
   &__header-bg{
@@ -229,12 +249,62 @@ h2{
   color: $private;
   dt{
     width: 25%;
+    @include media-sp{
+      width: 30%;
+    }
   }
   dd{
     width: 75%;
+    @include media-sp{
+      width: 70%;
+    }
   }
   dt, dd{
     padding: 30px 10px 30px 20px;
     border-top: 1px solid #D6D6D6;
+    @include media-sp{
+      padding: 25px 10px 25px 20px;
+    }
+  }
+}
+.note{
+  @include fontSize(12px);
+  color: $private;
+}
+
+// breadcrumb
+.breadcrumb{
+  padding-left: 2.5vw;
+  padding-top: 120px;
+  @include media-sp{
+    padding-left: 10px;
+  }
+  li{
+    position: relative;
+    padding-right: 22px;
+    @include media-sp{
+      padding-left: 0;
+    }
+    @include fontSize(12px);
+      color: $private;
+      &:first-child{
+        &:before{
+          @extend %pos;
+          width: 1px;
+          height: 80%;
+          background-color: #D6D6D6;
+          right: 9px;
+          bottom: 0;
+          top: 0;
+          margin: auto;
+        }
+        a{
+          color:$txt_color;
+        }
+      }
+    a{
+      @include fontSize(12px);
+      color: $private;
+    }
   }
 }

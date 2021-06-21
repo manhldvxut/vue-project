@@ -13,23 +13,31 @@
         <div class="row">
             <div class="col-md-3 other__footer-boder"><a href="/" class="other__footer-item">
                     <div class="hover_scale"><img src="/assets/images/icon-buy.svg" alt="BUYING GUIDE"></div>
-                    <h3>BUYING GUIDE</h3>
-                    <p>ご購入方法(個人様)</p>
+                    <div class="sp-block">
+                        <h3>BUYING GUIDE</h3>
+                        <p>ご購入方法(個人様)</p>
+                    </div>
                 </a></div>
             <div class="col-md-3 other__footer-boder"><a href="/" class="other__footer-item">
                     <div class="hover_scale"><img src="/assets/images/icon-partner.svg" alt="PARTNER GUIDE"></div>
-                    <h3>PARTNER GUIDE</h3>
-                    <p>新規お取引(企業様)</p>
+                    <div class="sp-block">
+                        <h3>PARTNER GUIDE</h3>
+                        <p>新規お取引(企業様)</p>
+                    </div>
                 </a></div>
             <div class="col-md-3 other__footer-boder"><a href="/" class="other__footer-item">
                     <div class="hover_scale"><img src="/assets/images/icon-media.svg" alt="MEDIA"></div>
-                    <h3>MEDIA</h3>
-                    <p>メディア掲載のご依頼</p>
+                    <div class="sp-block">
+                        <h3>MEDIA</h3>
+                        <p>メディア掲載のご依頼</p>
+                    </div>
                 </a></div>
             <div class="col-md-3 other__footer-boder"><a href="/contact/" class="other__footer-item">
                     <div class="hover_scale"><img src="/assets/images/icon-contact.svg" alt="CONTACT"></div>
-                    <h3>CONTACT</h3>
-                    <p>製品に関するお問い合わせ</p>
+                    <div class="sp-block">
+                        <h3>CONTACT</h3>
+                        <p>製品に関するお問い合わせ</p>
+                    </div>
                 </a></div>
         </div>
 	</div>

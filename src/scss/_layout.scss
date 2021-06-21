@@ -621,6 +621,9 @@
 		@include media-ip{
 			padding-top: 30px;
 		}
+		@include media-sp{
+			z-index: 2;
+		}
 	}
 }
 
@@ -882,10 +885,17 @@
 
 	&__detail{
 		margin-bottom: 120px;
+		@include media-sp{
+			overflow: hidden;
+			margin-bottom: 40px;
+		}
 		&-info{
 			position: relative;
 			margin-right: -15vw;
 			z-index: 2;
+			@include media-sp{
+				margin-right: 0;
+			}
 			.new__mask{
 				position: relative;
 				left: 0;
@@ -909,25 +919,49 @@
 					color:$private;
 					border-color: $private;
 				}
+				@include media-ip{
+					margin-bottom: 20px;
+				}
+				@include media-si{
+					@include fontSize(10px);
+					margin-bottom: 15px;
+				}
 			}
 			&_head{
 				margin-bottom: 80px;
+				@include media-si{
+					margin-bottom: 40px;
+				}
 			}
 			&_review{
 				h3{
 					font-weight: bold;
 					@include fontSize(16px);
 					color: $private;
+					@include media-si{
+						@include fontSize(14px);
+					}
 				}
 				p{
 					margin-top: 1rem;
 					@include fontSize(16px);
 					color: $private;
 					line-height: 1.68;
+					@include media-si{
+						@include fontSize(14px);
+					}
 				}
 			}
 			.btn__amazon{
 				margin-top: 1rem;
+				@include media-ip{
+					@include fontSize(12px);
+				}
+				@include media-sp{
+					&.only_pc{
+						display: none;
+					}
+				}
 			}
 		}
 		h1{
@@ -936,16 +970,32 @@
 			letter-spacing: 0px;
 			color: $private;
 			margin-bottom: 10px;
+			@include media-si{
+				@include fontSize(24px);
+			}
 		}
 		&-code{
 			@include fontSize(14px);
 			color: $private;
+			@include media-si{
+				@include fontSize(12px);
+			}
 		}
 		&-img{
 			background-color: #fafafa;
 			position: relative;
 			margin-top: -150px;
 			height: 80vh;
+			@include media-pro{
+				height: 50vh;
+			}
+			@include media-ip{
+				height: 48vh;
+			}
+			@include media-sp{
+				height: auto;
+				margin-top: 0;
+			}
 			img{
 				object-fit: cover;
 			}
@@ -968,11 +1018,31 @@
 			@include media-pro{
 				padding-left: 8%;
 			}
+			@include media-ip{
+				padding-left: 5%;
+			}
+			@include media-sp{
+				width: 100%;
+				padding: 0 20px;
+			}
 		}
 		.fx_right{
 			width: 60%;
 			padding-right: 0;
 			z-index: 1;
+			@include media-sp{
+				width: 100%;
+				padding: 0 20px;
+			}
+			.btn__amazon.sp_only{
+				display: none;
+				@include media-sp{
+					display: block;
+					margin: 40px auto;
+					max-width: 50%;
+					padding: 15px 35px;
+				}
+			}
 		}
 		
 	}
@@ -982,15 +1052,30 @@
 			> *{
 				margin-bottom: 60px;
 				height: 100%;
+				@include media-ip{
+					margin-bottom: 20px;
+				}
+				@include media-sp{
+					margin-bottom: 15px;
+				}
 				&:nth-child(even){
 					margin-top: 60px;
-					/*margin-top: 60px;
-					margin-bottom: 0;*/
+					@include media-sp{
+						margin-top: 0;
+					}
 				}
+			}
+		}
+		&-info{
+			@include media-sp{
+				padding: 0 20px;
 			}
 		}
 		.hover_scale{
 			margin-bottom: 30px;
+			@include media-sp{
+				margin-bottom: 25px;
+			}
 		}
 		h3{
 			color: $private;
@@ -998,12 +1083,18 @@
 			line-height: 1.68;
 			letter-spacing: 0px;
 			font-weight: bold;
+			@include media-si{
+				@include fontSize(14px);
+			}
 		}
 		p{
 			@include fontSize(14px);
 			color: $private;
 			line-height: 1.7;
 			letter-spacing: 0px;
+			@include media-si{
+				@include fontSize(14px);
+			}
 		}
 	}
 
@@ -1013,6 +1104,16 @@
 	.product{
 		&.fx_mr{
 			padding: 0 16.25vw;
+			@include media-ip{
+				padding: 0 5%;
+			}
+			@include media-sp{
+				padding: 0;
+				h2{
+					padding-left: 20px;
+					margin-bottom: 40px;
+				}
+			}
 		}
 	}
 }
@@ -1175,6 +1276,30 @@
 	.viewall{
 		@include media-si{
 			padding-right: vw(17px);
+		}
+	}
+	&__list{
+		> ul{
+			
+			.ftr{
+				list-style: none;
+				padding: 0 12px;
+			}
+		}
+		&-info{
+			padding: 0;
+			margin: 0 -12px;
+			li{
+				&:first-child.ftr{
+					width: 25%;
+				}
+				&:last-child{
+					width: 75%;
+					> ul{
+						padding-left: 0;
+					}
+				}
+			}
 		}
 	}
 }
@@ -1352,6 +1477,7 @@
 	}
 }
 .housework{
+	margin-bottom: 100px;
 	.product__body{
 		max-width: inherit;
 		&.m-30{
@@ -1397,6 +1523,13 @@
 	background-color: #F4F4F4;
 	padding: 100px 0 1px;
 	margin-bottom: 100px;
+	@include media-sp{
+		padding-top: 60px;
+		margin-bottom: 80px;
+		&__info{
+			padding: 0 20px;
+		}
+	}
 	dd{
 		margin-bottom: 0;
 	}
@@ -1405,6 +1538,13 @@
 		color: $txt_color;
 		margin: 0 10px;
 		transition: 0.2s all;
+		@include media-ip{
+			padding: 3vw 14.66667vw;
+		}
+		@include media-sp{
+			padding: 3vw 12vw;
+			@include fontSize(12px);
+		}
 		&:hover{
 			border-color:$private;
 			color: $private;
@@ -1416,8 +1556,14 @@
 .buy_card{
 	max-width: 40vw;
 	margin: auto;
+	@include media-si{
+		max-width: 80%;
+	}
 	img{
 		max-width: 20vw;
+		@include media-si{
+			max-width: 100%;
+		}
 	}
 	h3{
 		line-height: 1.77;
@@ -1435,6 +1581,12 @@
 		text-align: center;
 		border: 1px solid #D6D6D6;
 		border-right: none;
+		@include media-ip{
+			margin-bottom: 45px;
+		}
+		@include media-sp{
+			border: 0;
+		}
 		img{
 			width: auto;
 		}
@@ -1444,27 +1596,56 @@
 			color: $private;
 			letter-spacing: 0px;
 			font-weight: normal;
+			@include media-sp{
+				margin-bottom: 0;
+				@include fontSize(18px);
+			}
 		}
 		p{
 			color: $private;
 			@include fontSize(14px);
+			@include media-sp{
+				@include fontSize(13px);
+			}
 		}
 		.hover_scale{
 			margin-bottom: 20px;
 			overflow: inherit;
+			@include media-sp{
+				margin-bottom: 0;
+			}
 		}
 		&-item{
 			/*border: 1px solid $txt_color;*/
 			padding: 85px 0;
 			display: block;
-			
+			@include media-ip{
+				padding: 48px 0;
+			}
+			@include media-sp{
+				display: flex;
+				align-items: center;
+				padding: 30px 10px 30px 30px;
+				.sp-block{
+					margin-left: 40px;
+					text-align: left;
+				}
+			}
 		}
+
 		&-boder{
 			border-right: 1px solid #D6D6D6;
 			padding: 0;
 			transition: 0.3s all;
+			@include media-sp{
+				border-top: 1px solid #D6D6D6;
+				border-right: 0;
+			}
 			&:last-child{
 				border-right: none;
+				@include media-sp{
+					border-bottom: 1px solid #D6D6D6;
+				}
 			}
 			&:first-child{
 				border-left: none;
@@ -1480,4 +1661,210 @@
 			
 		}
 	}
+}
+
+// scroll spy
+.scroll_spy{
+	position: fixed;
+	right: 50px;
+	top: 40%;
+	z-index: 11;
+	@include media-ip{
+		right: 20px;
+	}
+	@include media-sp{
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		top: auto;
+		z-index: 1;
+	}
+	ul{
+		@include media-sp{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-left: 0;
+			margin-bottom: 0;
+			
+		}
+		li{
+			position: relative;
+			list-style: none;
+			margin-bottom: 14px;
+			transition: 0.2s all;
+			@include media-pc{
+				&:hover{
+					a{
+						color: $private;
+					}
+				}
+			}
+			@include media-sp{
+				width: 50%;
+				text-align: center;
+				border: 1px solid $txt_color;
+				background-color: #fff;
+				margin-bottom: 0;
+				&:first-child{
+					border-right:0;
+				}
+			}
+			&:before{
+				@extend %pos;
+				width: 6px; 
+				height: 6px;
+				border: 1px solid $txt_color;
+				left: -15px;
+				border-radius: 100%;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				animation: play 2s ease infinite;
+    			backface-visibility: hidden;
+    			opacity: 0.8;
+    			@include media-sp{
+    				left: 16vw;
+    			}
+
+			}
+			a{
+				display: block;
+				color: $txt_color;
+				@include fontSize(13px);
+				@include media-sp{
+					padding: 20px 0;
+				}
+			}
+		}
+	}
+}
+
+#features{
+	.product__detail > .row{
+		margin: 0;
+	}
+}
+
+// guy buy
+.page_buyguide{
+	.fx-m{
+		@include media-pc{
+			margin: 0 -40px;
+		}
+		
+	}
+	.fx-p{
+		@include media-pc{
+			padding: 0 40px;
+		}
+		position: relative;
+		@include media-ip{
+			&:last-child{
+				margin-bottom: 100px;
+			}
+		}
+	}
+}
+.ng_r{
+	position: absolute;
+	right: -1vw;
+	margin: auto;
+	top: 50%;
+	@include fontSize(14px);
+	color: $private;
+	@include media-pro{
+		right: -1.8vw;
+	}
+	@include media-si{
+		left: 45%;
+	    bottom: -45px;
+	    top: auto;
+	    right: inherit;
+	}
+}
+
+.guy{
+	&__box{
+		margin-top: 60px;
+		background-color: #EDEDED;
+		padding: 40px;
+		color: $private;
+		height: 90%;
+		@include media-si{
+			height: auto;
+		}
+		@include media-sp{
+			padding: 40px 20px;
+		}
+		h3{
+			@include fontSize(20px);
+			font-weight: bold;
+			margin-bottom: 40px;
+			@include media-sp{
+				margin-bottom: 30px;
+			}
+		}
+		> p{
+			@include fontSize(14px);
+			margin-bottom: 33px;
+			@include media-sp{
+				@include fontSize(13px);
+			}
+		}
+		.note{
+			@include fontSize(12px);
+			@include media-sp{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&_btn{
+		@include fontSize(12px);
+		display: block;
+		border: 1px solid $txt_color;
+		padding: 20px 0;
+		margin-bottom: 10px;
+		transition: 0.3s all;
+		&:hover{
+			@include media-pc{
+				background-color: #fff;
+				color: $private;
+				opacity: 1;
+				border-color: $private;
+				border-radius: 0;
+			}
+		}
+	}
+	&_step{
+		.step{
+			font-weight: bold;
+			text-transform: uppercase;
+			background-color: #D6D6D6;
+			border-radius: 24px;
+			padding: 4px 12px;
+			margin-bottom: 0;
+			margin-right: 8px;
+		}
+		h4{
+			@include fontSize(16px);
+			font-weight: bold;
+			margin-bottom: 0;
+		}
+		p{
+			@include fontSize(14px);
+		}
+		.d-flex{
+			margin-bottom: 24px;
+			flex-wrap: wrap;
+		}
+		img{
+			margin-bottom: 20px;
+			@include media-sp{
+				margin-bottom: 30px;
+			}
+		}
+	}
+
 }

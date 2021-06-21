@@ -45,17 +45,16 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 <main class="main-contents">
 	
 	<div class="container content__page">
-		<section class="housework">
-			<h2 v-for="(products, index) in convertProduct.slice(0, 1)" 
-			v-bind:key="index" v-infocus="'showElement'" 
-			v-if="products.product_type =='家事家電'">
+		<!-- 家事家電 -->
+		<section class="housework seasonal">
+			<h2  v-for="(products, id) in fitter_productType" v-bind:key="id" v-infocus="'showElement'" v-if="products.product_type =='家事家電' ">
 				{{products.product_type}}
 			</h2>
 
-			<div class="count__item">{{products.length}} Items</div>
+			<div class="count__item">{{count_houseWork}} Items</div>
 
 			<div class="row product__body m-30">
-				<div class="col-lg-4 col-md-6 col-6 hidden p-30"  
+				<div class="count_houseWork col-lg-4 col-md-6 col-6 hidden p-30"  
 				v-for="(products, index) in convertProduct.slice().reverse()" 
 				v-if="products.product_type =='家事家電'"
 				v-bind:key="index" v-infocus="'showElement'" >
@@ -68,17 +67,16 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</div>
 		</section>
 
-		<section class="housework">
-			<h2 v-for="(products, index) in convertProduct.slice(0, 1)" 
-			v-bind:key="index" v-infocus="'showElement'" 
-			v-if="products.product_type =='季節家電'">
+		<!-- 季節家電 -->
+		<section class="housework seasonal">
+			<h2  v-for="(products, id) in fitter_productType" v-bind:key="id" v-infocus="'showElement'" v-if="products.product_type =='季節家電' ">
 				{{products.product_type}}
 			</h2>
 
-			<div class="count__item">{{products.length}} Items</div>
+			<div class="count__item">{{count_seasonal}} Items</div>
 
 			<div class="row product__body m-30">
-				<div class="col-lg-4 col-md-6 col-6 hidden p-30"  
+				<div class="count_seasonal col-lg-4 col-md-6 col-6 hidden p-30"  
 				v-for="(products, index) in convertProduct.slice().reverse()" 
 				v-if="products.product_type =='季節家電'"
 				v-bind:key="index" v-infocus="'showElement'" >
@@ -90,7 +88,117 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 				</div>
 			</div>
 		</section>
-	</div>
+
+		<!-- カー用品 -->
+		<section class="housework seasonal">
+			<h2  v-for="(products, id) in fitter_productType" v-bind:key="id" v-infocus="'showElement'" v-if="products.product_type =='カー用品' ">
+				{{products.product_type}}
+			</h2>
+
+			<div class="count__item">{{count_carSupplies}} Items</div> 
+
+			<div class="row product__body m-30">
+				<div class="count_carSupplies col-lg-4 col-md-6 col-6 hidden p-30"  
+				v-for="(products, index) in convertProduct.slice().reverse()" 
+				v-if="products.product_type =='カー用品'"
+				v-bind:key="index" v-infocus="'showElement'" >
+					<span class="new__mask">new <i class="line-run"></i></span>
+					<a :href="products.link">
+						<div class="hover_scale"><img v-bind:src= " '/assets/images/top/' + products.image" :alt="products.title"></div>
+						<h3 v-html = "brTxt(products.title)"></h3>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- 雑貨 -->
+		<section class="housework seasonal">
+			<h2  v-for="(products, id) in fitter_productType" v-bind:key="id" v-infocus="'showElement'" v-if="products.product_type =='雑貨' ">
+				{{products.product_type}}
+			</h2>
+
+			<div class="count__item">{{count_miscellaneous}} Items</div>
+
+			<div class="row product__body m-30">
+				<div class="count_miscellaneous col-lg-4 col-md-6 col-6 hidden p-30"  
+				v-for="(products, index) in convertProduct.slice().reverse()" 
+				v-if="products.product_type =='雑貨'"
+				v-bind:key="index" v-infocus="'showElement'" >
+					<span class="new__mask">new <i class="line-run"></i></span>
+					<a :href="products.link">
+						<div class="hover_scale"><img v-bind:src= " '/assets/images/top/' + products.image" :alt="products.title"></div>
+						<h3 v-html = "brTxt(products.title)"></h3>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- 理美容 -->
+		<section class="housework seasonal">
+			<h2  v-for="(products, id) in fitter_productType" v-bind:key="id" v-infocus="'showElement'" v-if="products.product_type =='理美容' ">
+				{{products.product_type}}
+			</h2>
+
+			<div class="count__item">{{count_hairdressing}} Items</div>
+
+			<div class="row product__body m-30">
+				<div class="count_hairdressing col-lg-4 col-md-6 col-6 hidden p-30"  
+				v-for="(products, index) in convertProduct.slice().reverse()" 
+				v-if="products.product_type =='理美容'"
+				v-bind:key="index" v-infocus="'showElement'" >
+					<span class="new__mask">new <i class="line-run"></i></span>
+					<a :href="products.link">
+						<div class="hover_scale"><img v-bind:src= " '/assets/images/top/' + products.image" :alt="products.title"></div>
+						<h3 v-html = "brTxt(products.title)"></h3>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- AV家電 -->
+		<section class="housework seasonal">
+			<h2  v-for="(products, id) in fitter_productType" v-bind:key="id" v-infocus="'showElement'" v-if="products.product_type =='AV家電' ">
+				{{products.product_type}}
+			</h2>
+
+			<div class="count__item">{{count_avAppliances}} Items</div>
+
+			<div class="row product__body m-30">
+				<div class="count_avAppliances col-lg-4 col-md-6 col-6 hidden p-30"  
+				v-for="(products, index) in convertProduct.slice().reverse()" 
+				v-if="products.product_type =='AV家電'"
+				v-bind:key="index" v-infocus="'showElement'" >
+					<span class="new__mask">new <i class="line-run"></i></span>
+					<a :href="products.link">
+						<div class="hover_scale"><img v-bind:src= " '/assets/images/top/' + products.image" :alt="products.title"></div>
+						<h3 v-html = "brTxt(products.title)"></h3>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- 調理家電 -->
+		<section class="housework seasonal">
+			<h2  v-for="(products, id) in fitter_productType" v-bind:key="id" v-infocus="'showElement'" v-if="products.product_type =='調理家電' ">
+				{{products.product_type}}
+			</h2>
+
+			<div class="count__item">{{count_cooking}} Items</div>
+
+			<div class="row product__body m-30">
+				<div class="count_cooking col-lg-4 col-md-6 col-6 hidden p-30"  
+				v-for="(products, index) in convertProduct.slice().reverse()" 
+				v-if="products.product_type =='調理家電'"
+				v-bind:key="index" v-infocus="'showElement'" >
+					<span class="new__mask">new <i class="line-run"></i></span>
+					<a :href="products.link">
+						<div class="hover_scale"><img v-bind:src= " '/assets/images/top/' + products.image" :alt="products.title"></div>
+						<h3 v-html = "brTxt(products.title)"></h3>
+					</a>
+				</div>
+			</div>
+		</section>
+	</div> 
 
 </main>
 

@@ -6,7 +6,8 @@ var intViewportWidth = window.innerWidth;
 $(function() {
   setTimeout(function(){
     sliderTop();
-    pickupSlider()
+    pickupSlider();
+    scroll();
   }, 100);
   
 })
@@ -39,8 +40,13 @@ function showData(data){
       CurrentPath: '', // check path
       currentProduct: null,
       id: '',
-      count: '',
-
+      count_seasonal : '', // count 季節家電
+      count_houseWork: '', // count 家事家電
+      count_carSupplies: '', // count カー用品
+      count_miscellaneous: '', // count 雑貨
+      count_hairdressing: '', // count 理美容
+      count_avAppliances: '', // count AV家電
+      count_cooking: '', // count AV家電
     },
 
     mounted:function(){
@@ -76,11 +82,7 @@ function showData(data){
       this.footerNav02 = arr03;
       this.headerNav = arr04;
 
-      
-      
-      return;
-
-      
+      return;  
     },
     methods: {
       // <br>タグ対応
@@ -99,9 +101,9 @@ function showData(data){
       handleSCroll: function () {
         var header = document.getElementById("Header");
         if(intViewportWidth > 767){ // pc scroll
-          if (window.scrollY > 650 && !header.className.includes('header--bgchange')) {
+          if (window.scrollY > 250 && !header.className.includes('header--bgchange')) {
           header.classList.add('header--bgchange'); 
-          } else if (window.scrollY < 650) {
+          } else if (window.scrollY < 250) {
             header.classList.remove('header--bgchange');
           }
         }else{ // sp scroll
@@ -127,7 +129,6 @@ function showData(data){
       window.addEventListener('scroll', this.handleSCroll);
 
       
-
       try { // pass id
         const route  = window.location.href.split('?')[1];
         
@@ -135,7 +136,6 @@ function showData(data){
         this.id = id;
 
         
-
         // fetch(`/api/product.php?id=${this.id}`)
         // .then(response => response.json())
         // .then(data => this.currentProduct = data)
@@ -185,10 +185,28 @@ function showData(data){
       },
     },
     updated(){
-      var ElLength = document.getElementsByClassName('aa').length;
-      console.log('ElLength = ' + ElLength);
+      var count_seasonalLE = document.getElementsByClassName('count_seasonal').length;
+      this.count_seasonal = count_seasonalLE;
 
-      this.count = ElLength;
+      var count_houseWorkLE = document.getElementsByClassName('count_houseWork').length;
+      this.count_houseWork = count_houseWorkLE;
+
+      var count_carSuppliesLE = document.getElementsByClassName('count_carSupplies').length;
+      this.count_carSupplies = count_carSuppliesLE;
+
+      var count_miscellaneousLE = document.getElementsByClassName('count_miscellaneous').length;
+      this.count_miscellaneous = count_miscellaneousLE;
+
+      var count_hairdressingLE = document.getElementsByClassName('count_hairdressing').length;
+      this.count_hairdressing = count_hairdressingLE;
+
+      var count_avAppliancesLE = document.getElementsByClassName('count_avAppliances').length;
+      this.count_avAppliances = count_avAppliancesLE;
+
+      var count_cookingLE = document.getElementsByClassName('count_cooking').length;
+      this.count_cooking = count_cookingLE;
+
+
     }
   })
 }
@@ -249,4 +267,18 @@ function pickupSlider() {
       ]
     });
   }
+}
+
+function scroll(){
+   $('a.scroll').click(function() {
+        // スクロールの速度
+        var speed = 400; // ミリ秒で記述
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('body,html').animate({
+            scrollTop: position
+        }, speed, 'swing');
+        return false;
+    });
 }

@@ -14,7 +14,7 @@
 						<li v-for="(headerNavItem, index) in headerNav" v-bind:key = "index" v-if="index == 0">
 							<a :href="headerNavItem.link">{{headerNavItem.navItem}}</a>
 						</li>
-						<li><a href="">調理家電</a></li>
+						<li><a href="/products/調理家電/">調理家電</a></li>
 						<li v-for="(headerNavItem, index) in headerNav" v-bind:key = "index" v-if="index > 0">
 							<a :href="headerNavItem.link">{{headerNavItem.navItem}}</a>
 						</li>

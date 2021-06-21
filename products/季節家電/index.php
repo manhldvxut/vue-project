@@ -50,10 +50,10 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 				{{products.product_type}}
 			</h2>
 
-			<div class="count__item">{{count}} Items</div>
+			<div class="count__item">{{count_seasonal}} Items</div>
 
 			<div class="row product__body m-30">
-				<div class="aa col-lg-4 col-md-6 col-6 hidden p-30"  
+				<div class="count_seasonal col-lg-4 col-md-6 col-6 hidden p-30"  
 				v-for="(products, index) in convertProduct.slice().reverse()" 
 				v-if="products.product_type =='季節家電'"
 				v-bind:key="index" v-infocus="'showElement'" >

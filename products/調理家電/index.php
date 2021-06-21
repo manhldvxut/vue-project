@@ -41,21 +41,21 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
  * Main contents
  */
 ?>
-
 <main class="main-contents">
 	
 	<div class="container content__page">
-		<section class="housework">
-			<h2  v-for="(products, id) in fitter_productType" v-bind:key="id" v-infocus="'showElement'" v-if="products.product_type =='家事家電' ">
+
+		<section class="housework seasonal">
+			<h2  v-for="(products, id) in fitter_productType" v-bind:key="id" v-infocus="'showElement'" v-if="products.product_type =='調理家電' ">
 				{{products.product_type}}
 			</h2>
 
-			<div class="count__item">{{count_houseWork}} Items</div>
+			<div class="count__item">{{count_cooking}} Items</div>
 
 			<div class="row product__body m-30">
-				<div class="count_houseWork col-lg-4 col-md-6 col-6 hidden p-30"  
+				<div class="count_cooking col-lg-4 col-md-6 col-6 hidden p-30"  
 				v-for="(products, index) in convertProduct.slice().reverse()" 
-				v-if="products.product_type =='家事家電'"
+				v-if="products.product_type =='調理家電'"
 				v-bind:key="index" v-infocus="'showElement'" >
 					<span class="new__mask">new <i class="line-run"></i></span>
 					<a :href="products.link">
@@ -68,6 +68,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 	</div>
 
 </main>
+
 
 <?php
 /**
