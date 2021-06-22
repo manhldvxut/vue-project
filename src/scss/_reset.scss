@@ -9,6 +9,7 @@ html, body {
 }
 body{
   background-color: $body_color;
+  color: $private;
 }
 *,
 *::before,
@@ -275,7 +276,7 @@ sup {
 }
 a {
   cursor: pointer;
-  color: #000000;
+  color: $private;
   background-color: transparent;
   text-decoration: none;
   transition: 0.5s all;

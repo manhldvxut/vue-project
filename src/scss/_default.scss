@@ -94,6 +94,7 @@ h2{
 }
 .tag{
   color: $txt_color;
+  text-transform: uppercase;
 }
 .viewall{
   text-align: right;
@@ -168,6 +169,18 @@ h2{
        margin-top: 80px;
        @include media-sp{
         margin-top: 40px;
+      }
+    }
+    &.category__page{
+      margin-bottom: 120px;
+      @include media-pro{
+        max-width: 95%;
+      }
+      @include media-ip{
+        margin-bottom: 70px;
+      }
+      @include media-sp{
+        margin-bottom: 55px;
       }
     }
     
@@ -278,6 +291,7 @@ h2{
   padding-top: 120px;
   @include media-sp{
     padding-left: 10px;
+    padding-top: 70px;
   }
   li{
     position: relative;
@@ -286,25 +300,74 @@ h2{
       padding-left: 0;
     }
     @include fontSize(12px);
-      color: $private;
-      &:first-child{
+      color: $txt_color;
+      &:before{
+        @extend %pos;
+        width: 1px;
+        height: 80%;
+        background-color: #D6D6D6;
+        right: 9px;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+      }
+      &:last-child{
+        color:$private;
+      }
+      &:last-child{
         &:before{
-          @extend %pos;
-          width: 1px;
-          height: 80%;
-          background-color: #D6D6D6;
-          right: 9px;
-          bottom: 0;
-          top: 0;
-          margin: auto;
-        }
-        a{
-          color:$txt_color;
+          opacity: 0;
         }
       }
     a{
       @include fontSize(12px);
-      color: $private;
+      color: $txt_color;
     }
+  }
+}
+
+// category information page setup
+
+.category__information-detail{
+  h2{
+    @include fontSize(26px);
+    @include media-sp{
+      @include fontSize(24px);
+    }
+  }
+
+  p, a{
+    color: $private;
+    line-height: 1.7;
+    @include media-sp{
+      @include fontSize(14px);
+      letter-spacing: 0;
+    }
+  }
+  ul li, ol li, dl dd, dl dt{
+    line-height: 1.7;
+    @include media-sp{
+      @include fontSize(14px);
+      letter-spacing: 0;
+    }
+  }
+  h3{
+    font-weight: bold;
+    line-height: 1.7;
+    @include fontSize(22px);
+    color: $private;
+  }
+  h4{
+    font-weight: bold;
+    line-height: 1.7;
+    @include fontSize(18px);
+    color: $private;
+  }
+  h5{
+    font-weight: bold;
+    line-height: 1.7;
+    @include fontSize(16px);
+    font-weight: bold;
+    color: $private;
   }
 }

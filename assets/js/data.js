@@ -180,7 +180,7 @@ function showData(data){
           }
         })
       },
-      fitter_productType(){ // remove product_type duplicates
+      fitter_productType(){ // remove product_type duplicates 
         return [...new Map(this.products.map(item => [item.product_type, item])).values()];
       },
     },

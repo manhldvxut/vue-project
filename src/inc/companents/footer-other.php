@@ -11,21 +11,21 @@
 			</div>
 		</div> -->
         <div class="row">
-            <div class="col-md-3 other__footer-boder"><a href="/" class="other__footer-item">
+            <div class="col-md-3 other__footer-boder"><a href="/buying-guide/" class="other__footer-item">
                     <div class="hover_scale"><img src="/assets/images/icon-buy.svg" alt="BUYING GUIDE"></div>
                     <div class="sp-block">
                         <h3>BUYING GUIDE</h3>
                         <p>ご購入方法(個人様)</p>
                     </div>
                 </a></div>
-            <div class="col-md-3 other__footer-boder"><a href="/" class="other__footer-item">
+            <div class="col-md-3 other__footer-boder"><a href="/partner-guide/" class="other__footer-item">
                     <div class="hover_scale"><img src="/assets/images/icon-partner.svg" alt="PARTNER GUIDE"></div>
                     <div class="sp-block">
                         <h3>PARTNER GUIDE</h3>
                         <p>新規お取引(企業様)</p>
                     </div>
                 </a></div>
-            <div class="col-md-3 other__footer-boder"><a href="/" class="other__footer-item">
+            <div class="col-md-3 other__footer-boder"><a href="/media-guide/" class="other__footer-item">
                     <div class="hover_scale"><img src="/assets/images/icon-media.svg" alt="MEDIA"></div>
                     <div class="sp-block">
                         <h3>MEDIA</h3>

@@ -48,40 +48,28 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 
 <main class="main-contents">
 	
-	<div class="container content__page  fx_ctxt">
+	<div class="container content__page  fx_ctxt category__page">
 		<h1>お知らせ</h1>
-		<div class="row">
-			<div class="col-lg-6">
+		<div class="row category__information">
+			<div class="col-lg-6" v-for="(categoryNew, index) in news.slice().reverse()" v-bind:key = "index">
 				<div class="news__list news__body--item">
 					<ul class="news__list-info">
-						<li class="ftr"><img src="/assets/images/top/prd03.png"></li>
+						<li class="ftr"><img :src="'/assets/images/top/' + categoryNew.image"></li>
 						<li class="ftr">
 							<ul class="d-flex">
-								<li class="time">2021.05.27</li> 
-								<li><a href="" class="tag">#MEDIA</a></li>
+								<li class="time">{{categoryNew.time}}</li> 
+								<li><a href="" class="tag">#{{categoryNew.tag}}</a></li>
 							</ul>
-							<h3><a href="/category/information/">【TV放映】フジテレビ「めざましテレビ」の「スゴ撮」にて無煙グリル ゼロスモークDX(RM-103TE)が紹介されました。</a></h3>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="news__list news__body--item">
-					<ul class="news__list-info">
-						<li class="ftr"><img src="/assets/images/top/prd03.png"></li>
-						<li class="ftr">
-							<ul class="d-flex">
-								<li class="time">2021.05.27</li> 
-								<li><a href="" class="tag">#MEDIA</a></li>
-							</ul>
-							<h3><a href="/category/information/">【TV放映】フジテレビ「めざましテレビ」の「スゴ撮」にて無煙グリル ゼロスモークDX(RM-103TE)が紹介されました。</a></h3>
+							<h3><a href="/category/information/detail">{{categoryNew.title}}</a></h3>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
+		
+		<?php include_once $_SERVER['DOCUMENT_ROOT'].'/src/inc/companents/pagination.php'; ?>
 	</div>
-
+	
 </main>
 
 <?php

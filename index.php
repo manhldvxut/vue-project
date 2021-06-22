@@ -115,7 +115,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 				<span class="jp">最新のお知らせ</span>
 			</h2>
 			<div class="row news__body">
-				<div class="col-lg-4 hidden" v-for="(newsitem, index) in news" v-bind:key="index" v-infocus="'showElement'">
+				<div class="col-lg-4 hidden" v-for="(newsitem, index) in news.slice().reverse()" v-bind:key="index" v-infocus="'showElement'" v-if="(index < 3)">
 					<div class="news__body--item">
 						<h3><a :href="newsitem.link">{{newsitem.title}}</a></h3>
 						<ul>
@@ -125,7 +125,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 					</div>
 				</div>
 			</div>
-			<a href="" class="viewall">すべてのお知らせを見る</a>
+			<a href="/category/information/" class="viewall">すべてのお知らせを見る</a>
 		</div>
 	</section>
 

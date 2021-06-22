@@ -54,9 +54,9 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 					<div class="product__detail-info">
 						<a class="product__detail-info--title" :href="'/products/' + products.product_type">{{products.product_type}}</a>
 						<div class="product__detail-info_head">
-							<span class="new__mask">new <i class="line-run"></i></span>
+							<span class="new__mask">new<i class="line-run"></i></span>
 							<h1>{{products.title}}</h1>
-							<div class="product__detail-code">RM-103TE</div>
+							<div class="product__detail-code">{{products.productCode}}</div>
 						</div>
 						<div class="product__detail-info_review">
 							<h3 v-html = "brTxt(products.h3)"></h3>
