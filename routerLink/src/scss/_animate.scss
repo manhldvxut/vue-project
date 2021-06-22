@@ -1,0 +1,74 @@
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+/*fade in up*/
+@keyframes fadeup {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+// run new mask
+
+@keyframes header_off1 {
+    0% {
+        left: -10%;
+        opacity: 0
+    }
+
+    15%,
+    85% {
+        left: 0;
+        opacity: 1
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0
+    }
+}
+
+
+// play
+
+@keyframes play {
+
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.4);
+    }
+    25% {
+        box-shadow: 0 0 0 3px rgba(154, 154, 154, 0.4), 0 0 0 4px rgba(154, 154, 154, 0.2);
+    }
+    25% {
+        box-shadow: 0 0 0 4px rgba(154, 154, 154, 0.4), 0 0 0 4px rgba(154, 154, 154, 0.2);
+    }
+
+}
