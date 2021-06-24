@@ -2,16 +2,6 @@
 ------------------------------------------------------------------------------------------------------------------------*/
 var intViewportWidth = window.innerWidth;
 
-
-$(function() {
-  setTimeout(function(){
-    sliderTop();
-    pickupSlider();
-    //scroll();
-  }, 100);
-  
-})
-
 /*  data
 ------------------------------------------------------------------------------------------------------------------------*/
 // JSON読み込み
@@ -50,6 +40,15 @@ function showData(data){
     },
 
     mounted:function(){
+        if(intViewportWidth < 769){
+          setTimeout(function(){
+            sliderTop()
+            pickupSlider()
+          }, 200)
+        }else{
+          sliderTop()
+          pickupSlider()
+        }
 
       // products〜03の整形。カテゴリー数に応じて増減する。
       let arrPickup = new Array(),
@@ -113,8 +112,7 @@ function showData(data){
             header.classList.remove('header--bgchange');
           }
         }
-      }
-
+      },
     },
     watch: {
       
@@ -125,6 +123,7 @@ function showData(data){
     },
     created: function(){
       window.addEventListener('scroll', this.handleSCroll);
+      
 
 
       try { // pass id
@@ -142,6 +141,7 @@ function showData(data){
       } catch(e){
         console.log(e)
       }
+
     },
     destroyed: function(){
       window.removeEventListener('scroll', this.handleSCroll);
@@ -204,8 +204,7 @@ function showData(data){
       var count_cookingLE = document.getElementsByClassName('count_cooking').length;
       this.count_cooking = count_cookingLE;
       
-
-      $('a.scroll').click(function() {
+      $(document).on('click', 'a.scroll', function() {
         // スクロールの速度
         var speed = 400; // ミリ秒で記述
         var href = $(this).attr("href");
@@ -219,8 +218,6 @@ function showData(data){
     }
   })
 }
-
-
 
 function sliderTop() {
   const slider = $(document).find('.js-slider-top');
@@ -276,8 +273,4 @@ function pickupSlider() {
       ]
     });
   }
-}
-
-function scroll(){
-   
 }
