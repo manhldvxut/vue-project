@@ -65,7 +65,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</div>
 		</div>
 	</section>
-	<section class="pickup slider">
+	<section class="pickup slider font_set">
 		<div class="container-fluid">
 			<h2>PICK UP
 				<span class="jp">ピックアップ</span>
@@ -81,7 +81,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</div>
 		</div>
 	</section>
-	<section class="product">
+	<section class="product font_set">
 		<div class="container-fluid">
 			<h2 class="text-center">PRODUCTS
 				<span class="jp">おすすめの製品</span>
@@ -99,7 +99,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</div>
 		</div>
 	</section>
-	<section class="about">
+	<section class="about font_set">
 		<div class="about__body hidden" v-infocus="'showElement'">
 			<h3>暮らしに華を、生活に彩を。</h3>
 			<p>私たちは、日々の暮らしに華を咲かせ、<br>
@@ -109,7 +109,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 			</p>
 		</div>
 	</section>
-	<section class="news">
+	<section class="news font_set">
 		<div class="container-fluid">
 			<h2>news
 				<span class="jp">最新のお知らせ</span>
@@ -118,7 +118,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 				<div class="col-lg-4 hidden" v-for="(newsitem, index) in news.slice().reverse()" v-bind:key="index" v-infocus="'showElement'" v-if="(index < 3)">
 					<div class="news__body--item">
 						<h3><a :href="newsitem.link">{{newsitem.title}}</a></h3>
-						<ul>
+						<ul class="align-items-center">
 							<li class="time">{{newsitem.time}}</li>
 							<li ><a href="" class="tag">{{newsitem.tag}}</a></li>
 						</ul>

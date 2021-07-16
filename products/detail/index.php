@@ -78,9 +78,9 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 
 		</section>
 
-		<section class="product product__features fx_mr">
+		<section class="product product__features fx_mr font_set">
 			<h2>PRODUCTS
-				<span class="jp">おすすめの製品</span>
+				<span class="jp">製品の特徴</span>
 			</h2>
 			<div class="row m-40 product__features-body">
 				<div class="col-lg-6 p-40" v-if="(products.productBoxImg01Title != '')">
@@ -201,7 +201,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 				<h3 v-html = "brTxt(products.h3)"></h3>
 				<h4 class="mb-5">{{products.title}}</h4>
 				<div class="mb-5"><img :src="'/assets/images/top/' + products.image" :alt="products.title"></div>
-				<a :href="products.amazonLink" target="_blank" class="btn btn__amazon">Amazonで購入</a>
+				<a :href="products.amazonLink" target="_blank" class="btn btn__amazon m-auto">Amazonで購入</a>
 			</div>
 			
 		</section>

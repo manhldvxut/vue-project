@@ -34,7 +34,7 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 ?>
 
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/src/inc/header.php'; ?>
- 
+
 
 <?php
 /**
@@ -43,33 +43,36 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 ?>
 <ul class="breadcrumb">
 	<li><a href="/">HOME</a></li>
-	<li>お知らせ</li>
+	<li>新規お取引(企業様)</li>
 </ul>
 
 <main class="main-contents">
 	
-	<div class="container content__page  fx_ctxt category__page">
-		<h1>お知らせ</h1>
-		<div class="row category__information m-25">
-			<div class="col-lg-6 p-25" v-for="(categoryNew, index) in news.slice().reverse()" v-bind:key = "index">
-				<div class="news__list news__body--item">
-					<ul class="news__list-info hidden mr-12" v-infocus="'showElement'">
-						<li class="ftr pd-12"><img :src="'/assets/images/top/' + categoryNew.image"></li>
-						<li class="ftr pd-12">
-							<ul class="d-flex">
-								<li class="time">{{categoryNew.time}}</li> 
-								<li><a href="" class="tag">#{{categoryNew.tag}}</a></li>
-							</ul>
-							<h3><a href="/category/information/detail">{{categoryNew.title}}</a></h3>
-						</li>
-					</ul>
+	<div class="container content__page page_buyguide fx_ctxt">
+		<h1>新規お取引(企業様)</h1>
+		<div class="container">
+			<div class="row fx-m">
+				<div class="col-lg-6 fx-p">
+					<div class="guy__box">
+						<h3>卸販売</h3>
+						<p>ROOMMATEは卸販売を行っております。 下記よりサイト上でお取引の申請を行ってください。</p>
+						<a href="https://www.superdelivery.com/p/do/psl/?word=ルームメイト&so=score&vi=1&sb=all" class="btn guy_btn" target="_blank">卸販売サイトへ</a>
+						<p class="note">※ROOMMATEのAV家電ブランド「OVERTIME」の専用ショップが開きます</p>
+					</div>
+					<span class="ng_r">または</span>
 				</div>
+				<div class="col-lg-6 fx-p">
+					<div class="guy__box">
+						<h3>お問い合わせ</h3>
+						<p>お問い合わせフォームにて新規お取引に関するご相談を承っております。下記よりフォームにお進みください。</p>
+						<a href="/contact/" class="btn guy_btn partner-guide-btn">お問い合わせフォームへ</a>
+					</div>
+				</div>
+
 			</div>
 		</div>
-		
-		<?php include_once $_SERVER['DOCUMENT_ROOT'].'/src/inc/companents/pagination.php'; ?>
 	</div>
-	
+
 </main>
 
 <?php

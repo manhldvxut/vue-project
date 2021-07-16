@@ -159,6 +159,9 @@ h2{
       max-width: 67.5vw;
       margin: 180px auto 100px;
     }
+    @include media-pro{
+      max-width: 90%;
+    }
     &.page_buyguide{
       @include media-pro{
         max-width: 94.5vw;
@@ -230,6 +233,30 @@ h2{
   }
 }
 
+.m-25{
+  margin-left: -25px;
+  margin-right: -25px;
+  @include media-pro{
+    margin-left: -17px;
+    margin-right: -17px;
+  }
+  @include media-si{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.p-25{
+  padding-left: 25px;
+  padding-right: 25px;
+  @include media-pro{
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  @include media-si{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .p-30{
   padding: 0 1.875vw;
   @include media-si{
@@ -255,28 +282,30 @@ h2{
     margin:  0;
   }
 }
+
+.pd-12{
+  padding: 0 12px;
+}
+.mr-12{
+  margin: 0 -12px;
+}
 .dl-horizontal{
   display: flex;
   flex-wrap: wrap;
   @include fontSize(13px);
   color: $private;
   dt{
-    width: 25%;
-    @include media-sp{
-      width: 30%;
-    }
+    width: 27%;
   }
   dd{
-    width: 75%;
-    @include media-sp{
-      width: 70%;
-    }
+    width: 73%;
   }
   dt, dd{
-    padding: 30px 10px 30px 20px;
+    padding: 27px 10px 27px 20px;
     border-top: 1px solid #D6D6D6;
     @include media-sp{
-      padding: 25px 10px 25px 20px;
+      padding: 25px 10px 25px 15px;
+      @include fontSize(12px);
     }
   }
 }
@@ -298,6 +327,7 @@ h2{
     padding-right: 22px;
     @include media-sp{
       padding-left: 0;
+      @include fontSize(10px);
     }
     @include fontSize(12px);
       color: $txt_color;
@@ -322,6 +352,29 @@ h2{
     a{
       @include fontSize(12px);
       color: $txt_color;
+      position: relative;
+      &:before{
+        @extend %pos;
+        width: 100%;
+        height: 1px;
+        background-color: $private;
+        bottom: 0;
+        transition: 0.3s all;
+        transform: translateY(-7px);
+        opacity: 0;
+      }
+      @include media-pc{
+        &:hover{
+          color: $private;
+          &:before{
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      } 
+      @include media-sp{
+        @include fontSize(10px);
+      }
     }
   }
 }
@@ -334,6 +387,9 @@ h2{
     @include media-sp{
       @include fontSize(24px);
     }
+  }
+  .btn__amazon{
+    color: #E59703;
   }
 
   p, a{
@@ -369,5 +425,20 @@ h2{
     @include fontSize(16px);
     font-weight: bold;
     color: $private;
+  }
+}
+
+.font_set{
+  h2{
+    letter-spacing: 0;
+    font-weight: normal;
+    font-family: $font_en;
+  }
+  .jp{
+    letter-spacing: 0;
+    font-family:"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    @include media-si{
+      margin-top: 5px;
+    }
   }
 }

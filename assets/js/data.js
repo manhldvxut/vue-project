@@ -2,6 +2,10 @@
 ------------------------------------------------------------------------------------------------------------------------*/
 var intViewportWidth = window.innerWidth;
 
+// zipcode
+
+var API__URL = "https://api.zipaddress.net/?zipcode=";
+
 /*  data
 ------------------------------------------------------------------------------------------------------------------------*/
 // JSON読み込み
@@ -113,6 +117,15 @@ function showData(data){
           }
         }
       },
+
+      sliderResize: function(e){
+        if(window.innerWidth < 769){
+          console.log('sp')
+        }
+        else{
+          console.log('pc')
+        }
+      }
     },
     watch: {
       
@@ -122,9 +135,12 @@ function showData(data){
       
     },
     created: function(){
-      window.addEventListener('scroll', this.handleSCroll);
-      
 
+      // handle scroll
+      window.addEventListener('scroll', this.handleSCroll);
+
+      // window resize
+      window.addEventListener("resize", this.sliderResize);
 
       try { // pass id
         
@@ -144,7 +160,11 @@ function showData(data){
 
     },
     destroyed: function(){
+      //scoll remove
       window.removeEventListener('scroll', this.handleSCroll);
+
+      // resize remove
+      window.removeEventListener("resize", this.sliderResize);
     },
     directives: { // scroll fade in
       infocus: {
@@ -170,7 +190,7 @@ function showData(data){
     },
     computed: {
       
-      convertProduct(){  // render product in id link
+      convertProduct: function(){  // render product in id link
         return this.products.map(item => {
           return {
             ...item,
@@ -178,11 +198,12 @@ function showData(data){
           }
         })
       },
-      fitter_productType(){ // remove product_type duplicates 
+      fitter_productType: function(){ // remove product_type duplicates 
         return [...new Map(this.products.map(item => [item.product_type, item])).values()];
       },
     },
     updated(){
+
       var count_seasonalLE = document.getElementsByClassName('count_seasonal').length;
       this.count_seasonal = count_seasonalLE;
 
@@ -203,18 +224,21 @@ function showData(data){
 
       var count_cookingLE = document.getElementsByClassName('count_cooking').length;
       this.count_cooking = count_cookingLE;
+
       
       $(document).on('click', 'a.scroll', function() {
         // スクロールの速度
         var speed = 400; // ミリ秒で記述
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
+        var position = target.offset().top - 100;
         $('body,html').animate({
             scrollTop: position
         }, speed, 'swing');
         return false;
       });
+
+
     }
   })
 }
