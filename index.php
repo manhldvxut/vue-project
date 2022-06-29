@@ -129,12 +129,14 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 		</div>
 	</section>
 
+	<form action="create-file.php" method="POST">
+			<img src="google.com" name="" alt="" id="imgLink">
+			<input hidden  type="text" name="linkUrl" id="inputLink" value="">
+			<textarea name="title"></textarea>
+			<input type="submit" id="myform" value="add to json file" onclick="DoSubmit()" >
+	</form> 
+
 </main>
-
-
-
-
-
 
 <?php
 /**
@@ -150,7 +152,6 @@ $page_shareurl = 'https://'.STORE_NAME.'.co.jp/';
 
 
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/'.DIRNAME.'/src/inc/js.php';?>
-
 <!-- /Javascript -->
 </body>
 </html>

@@ -8,8 +8,8 @@
 
 <!-- vue data -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-router"></script>
-<script src="https://unpkg.com/vuex"></script>
+<!-- <script src="https://unpkg.com/vue-router"></script> -->
+<!-- <script src="https://unpkg.com/vuex"></script> -->
 
 <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

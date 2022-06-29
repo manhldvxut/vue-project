@@ -915,11 +915,6 @@ input::-moz-placeholder {
   font-size: 0.875rem;
 }
 
-input:-ms-input-placeholder {
-  color: #9A9A9A;
-  font-size: 0.875rem;
-}
-
 input::placeholder {
   color: #9A9A9A;
   font-size: 0.875rem;
@@ -964,10 +959,6 @@ body, html {
 }
 
 ::-moz-placeholder {
-  color: #9A9A9A;
-}
-
-:-ms-input-placeholder {
   color: #9A9A9A;
 }
 
@@ -4842,21 +4833,12 @@ layout
   font-size: 14px;
 }
 
-.item :-ms-input-placeholder {
-  color: #BCBCBC;
-  font-size: 14px;
-}
-
 .item ::placeholder {
   color: #BCBCBC;
   font-size: 14px;
 }
 
 .item ::-moz-placeholder #post-select {
-  font-size: 12px;
-}
-
-.item :-ms-input-placeholder #post-select {
   font-size: 12px;
 }
 

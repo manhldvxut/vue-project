@@ -2,6 +2,13 @@
 ------------------------------------------------------------------------------------------------------------------------*/
 var intViewportWidth = window.innerWidth;
 
+var link = $('#imgLink').attr('src');
+function DoSubmit(){
+  document.getElementById("inputLink").value = link;
+  return false;
+}
+
+
 // zipcode
 
 var API__URL = "https://api.zipaddress.net/?zipcode=";
@@ -298,3 +305,4 @@ function pickupSlider() {
     });
   }
 }
+
